@@ -9,10 +9,14 @@ using namespace std;
 class Chromosome{
     private:
         unsigned num_points;
-        vector<Point> points; 
+         
         unsigned fitness;
         vector<bool> connections;
+        vector<unsigned> guards;
     public:
+        unsigned num_groups;
+        vector<Point> points;
+    
         Chromosome(){
             num_points = 0;
             points = vector<Point>();
@@ -23,7 +27,8 @@ class Chromosome{
         Chromosome(unsigned n_points){
             num_points = n_points;
             points = vector<Point>(n_points);
-            connections = vector<bool>(n_points * n_points);
+            connections = vector<bool>(n_points * n_points,false);
+            guards = vector<unsigned>();
             fitness = 0;
         }
 
@@ -34,16 +39,19 @@ class Chromosome{
             fitness = other.fitness;
         }
 
-        Chromosome(vector<Point> other_points, vector<bool> &connects){
+        Chromosome(vector<Point> other_points, vector<bool> &connects, vector<unsigned> &other_guards){
             num_points = other_points.size();
             points = vector<Point>(other_points);
             connections = vector<bool>(connects);
+            guards = vector<unsigned>(other_guards);
             fitness = 0;
         }
 
-        Chromosome(unsigned size_x, unsigned size_y, BitMap bitmap);
+        Chromosome(unsigned n_points, BitMap bitmap);
 
-        bool checkConnection(unsigned i, unsigned j);        
+        bool checkConnection(unsigned i, unsigned j);
+
+        void createConnection(unsigned i, unsigned j);        
 
         void calculate_fitness(BitMap bitmap);
 };

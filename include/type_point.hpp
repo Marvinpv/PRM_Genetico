@@ -3,7 +3,8 @@
 
 enum class TypePoint{
     Connective,
-    Group
+    Group,
+    Unknown
 };
 
 #endif
