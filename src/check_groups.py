@@ -14,16 +14,31 @@ groups = []
 for i in range(4,4+n_groups):
 
     groups.append(np.array(list(sys.argv[i].split(','))[:-1],dtype=int))
-    
-    #groups[i-4] = map(int,groups[i-4])
 
+connective = np.array([])
+print('Connective:',sys.argv[n_groups + 4])
+if sys.argv[n_groups + 4] != "None":
+    connective = np.array(list(sys.argv[n_groups + 4].split(',')[:-1]),dtype=int)
 
-im = plt.imread('maps/room1.pgm')
+connections = np.array([])
+if sys.argv[n_groups + 5] != "None":
+    connections = np.array(list(sys.argv[n_groups + 5].split(',')[:-1]),dtype=int)
+    connections = np.reshape(connections,(connections.size//2,2))
+
+im = plt.imread('maps/room1_inflated.pgm')
 implot = plt.imshow(im)
 for i in range(n_groups):
     print('Grupo',i,':',groups[i])
     color = np.random.rand()
-    plt.scatter(points_x[groups[i]],points_y[groups[i]],label='Group '+str(i))
+    plt.scatter(points_y[groups[i]],points_x[groups[i]],label='Group '+str(i))
+    
+if connective.size > 0:
+    plt.scatter(points_y[connective],points_x[connective],label='Connective')
+
+for i in range(connections.shape[0]):
+    y_values = [points_y[connections[i,0]],points_y[connections[i,1]]]
+    x_values = [points_x[connections[i,0]],points_x[connections[i,1]]]
+    plt.plot(y_values,x_values,linestyle='--')
 
 plt.legend()
 plt.show()

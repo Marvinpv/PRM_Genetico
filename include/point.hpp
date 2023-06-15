@@ -10,19 +10,22 @@ class Point{
     private:
         unsigned x;
         unsigned y;
-        set<unsigned> groups;
+        
         TypePoint type;
     public:
+        set<unsigned> groups;
         Point(){
             x = 0;
             y = 0;
             type = TypePoint::Group;
+            groups = set<unsigned>();
         }
 
         Point(unsigned x_0, unsigned y_0){
             x = x_0;
             y = y_0;
-            type = TypePoint::Unknown;
+            type = TypePoint::Group;
+            groups = set<unsigned>();
         };
 
         Point(const Point &other){
@@ -44,7 +47,7 @@ class Point{
             return type;
         }
 
-        set<unsigned> getGroups(){
+        set<unsigned> & getGroups(){
             return groups;
         }
 
@@ -57,6 +60,8 @@ class Point{
         void addGroup(unsigned g);
 
         bool checkGroup(unsigned g);
+
+        double getDistance(Point &other);
 };
 
 #endif

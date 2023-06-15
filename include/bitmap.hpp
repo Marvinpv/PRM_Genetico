@@ -38,7 +38,7 @@ class BitMap{
 
         unsigned getCols();
 
-        bool checkCollision(Point p1, Point p2);
+        bool checkCollision(Point p1, Point p2, unsigned &dist);
 };
 
 #endif

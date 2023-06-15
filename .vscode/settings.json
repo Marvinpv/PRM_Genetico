@@ -2,6 +2,11 @@
     "files.associations": {
         "vector": "cpp",
         "iosfwd": "cpp",
-        "iostream": "cpp"
+        "iostream": "cpp",
+        "chrono": "cpp",
+        "random": "cpp",
+        "limits": "cpp",
+        "type_traits": "cpp",
+        "ostream": "cpp"
     }
 }

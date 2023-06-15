@@ -11,7 +11,9 @@ BitMap::BitMap(string path_file){
 }
 
 unsigned char BitMap::getIndex(unsigned i, unsigned j){
-    return map[i*cols + j];
+    if(i >= 0 && i < rows && j>=0 && j < cols)
+        return map[i*cols + j];
+    return 0;
 }
 
 unsigned BitMap::getRows(){
@@ -66,17 +68,24 @@ void BitMap::inflateBorders(unsigned radius){
 
 
 void BitMap::inflateObstacles(unsigned radius){
-    inflateBorders(radius);
+    //inflateBorders(radius);
+
+    for(int i = 0; i < rows ; i++){
+        for(int j = 0 ; j < cols ; j++){
+            if(getIndex(i,j) == OBSTACLE_VAL){
+                for(int l = i - int(radius/2) ; l < i + int(radius/2) ; l++){
+                    for(int m = j - int(radius/2) ; m < j + int(radius/2) ; m++){
+                        if(getIndex(l,m) != OBSTACLE_VAL)
+                            setIndex(l,m,OBSTACLE_VAL + 1);
+                    }
+                }
+            }
+        }
+    }
 
     for(unsigned i = 0; i < rows ; i++){
         for(unsigned j = 0 ; j < cols ; j++){
-            if(getIndex(i,j) == UNKNOWN_SPACE_VAL){
-                for(unsigned l = i - int(radius/2) ; l < i+ int(radius/2) ; l++){
-                    for(unsigned m = j - int(radius/2) ; m < j+ int(radius/2) ; m++){
-                        if(getIndex(l,m) == FREE_SPACE_VAL)
-                            setIndex(l,m,OBSTACLE_VAL);
-                    }
-                }
+            if(getIndex(i,j) == OBSTACLE_VAL + 1){
                 setIndex(i,j,OBSTACLE_VAL);                
             }
         }
@@ -84,8 +93,9 @@ void BitMap::inflateObstacles(unsigned radius){
 
 }
 
-bool BitMap::checkCollision(Point p1, Point p2)
+bool BitMap::checkCollision(Point p1, Point p2, unsigned &dist)
 {
+    dist = 0;
     int dx, dy;
     int sx, sy;
     int x1 = p1.getX(), x2 = p2.getX(), y1 = p1.getY(), y2 = p2.getY();
@@ -105,8 +115,11 @@ bool BitMap::checkCollision(Point p1, Point p2)
     if (dx > dy)//if dx is greater than dy
     {
         accum = dx >> 1;//Accumilator = dx / 2
-        do
+        while (x1 != x2)
         {
+            //setIndex(x1,y1,100);
+            if(getIndex(x1, y1) == OBSTACLE_VAL)
+                return true;
             //Plot point
             //Subtract dy from accumilator
             accum -= dy;
@@ -120,28 +133,27 @@ bool BitMap::checkCollision(Point p1, Point p2)
             }
             //Add sx to Start X
             x1 += sx;
-            //setIndex(x1,y1,OBSTACLE_VAL);
-            if(getIndex(x1, y1) == OBSTACLE_VAL)
-                return true;
-        } while (x1 != x2);
+            dist++;
+        } 
     }
     else
     {
         accum = dy >> 1;
-        do
+        while (y1 != y2)
         {
+            if(getIndex(x1, y1) == OBSTACLE_VAL)
+                return true;
+            //setIndex(x1,y1,100);
+            //cout << x1<< ","<<y1<<endl;
             accum -= dx;
             if (accum < 0)
             {
                 accum += dy;
                 x1 += sx;
             }
-            y1 += sy;
-            //setIndex(x1,y1,OBSTACLE_VAL);
-            //cout << x1<< ","<<y1<<endl;
-            if(getIndex(x1, y1) == OBSTACLE_VAL)
-                return true;
-        } while (y1 != y2);
+            y1 += sy; 
+            dist++;
+        }
     }
     
     return false;

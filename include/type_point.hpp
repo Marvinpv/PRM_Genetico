@@ -4,7 +4,8 @@
 enum class TypePoint{
     Connective,
     Group,
-    Unknown
+    Unknown,
+    Guard
 };
 
 #endif

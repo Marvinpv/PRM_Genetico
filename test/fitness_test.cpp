@@ -2,28 +2,30 @@
 #include <bitmap.hpp>
 #include <string>
 #include <chromosome.hpp>
+#include <vector>
+#include <point.hpp>
 
 using namespace std;
 
-int main(void){
+int main(){
+
     string path = "./maps/room1_smoothed.pgm"; 
     BitMap mapa_prueba(path);
-    cout<<"Rows: " << mapa_prueba.getRows() << " Cols: " <<mapa_prueba.getCols() << endl;
 
-    for(unsigned i = 0 ; i < mapa_prueba.getRows() ; i++){
-        for(unsigned j = 0 ; j < mapa_prueba.getCols() ; j++){
-            //cout <<int(mapa_prueba.getIndex(i,j))<<" ";
-        }
-        //cout << endl;
-    }
-    
-    mapa_prueba.inflateObstacles(10);
-    unsigned dist;
-    mapa_prueba.checkCollision(Point(100,100),Point(7,280),dist);
-    mapa_prueba.writeBitMap("./maps/room1_inflated.pgm");
-    
+    vector<Point> points_1;
+    points_1.push_back(Point(60,36));
+    points_1.push_back(Point(55,250));
+    points_1.push_back(Point(156,166));
+    points_1.push_back(Point(203,72));
+    points_1.push_back(Point(103,280));
+    points_1.push_back(Point(263,115));
+    points_1.push_back(Point(50,141));
+    points_1.push_back(Point(25,278));
+    points_1.push_back(Point(266,22));
+    points_1.push_back(Point(270,272));
 
-    Chromosome c(10,mapa_prueba);
+    Chromosome c(points_1,mapa_prueba);
+
     cout <<"size: " <<c.getNumPoints()<<endl;
     string points_x = "";
     string points_y = "";
@@ -96,7 +98,4 @@ int main(void){
     //cout << "Comand: " << command <<endl;
 
     int ret = system(command.c_str());
-    
 }
-
-

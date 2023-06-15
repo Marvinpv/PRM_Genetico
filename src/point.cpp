@@ -2,15 +2,14 @@
 #include <algorithm>
 #include <iostream>
 #include <type_point.hpp>
+#include <math.h>
 
 using namespace std;
 
 void Point::addGroup(unsigned g){
-    if(!groups.count(g)){
-        groups.insert(g);
-    }else{
-        //cout << " Group "<<g<<" already in point: ("<<x<<","<<y<<") "<<endl;
-    }
+
+    groups.insert(g);
+    
 
     if(groups.size() > 1){
         type = TypePoint::Connective;
@@ -28,4 +27,8 @@ const Point & Point::operator=(const Point &otro){
 
 bool Point::checkGroup(unsigned g){
     return groups.count(g) > 0;
+}
+
+double Point::getDistance(Point &other){
+    return sqrt((x - other.getX())*(x - other.getX()) + (y - other.getY())*(y - other.getY()));
 }
