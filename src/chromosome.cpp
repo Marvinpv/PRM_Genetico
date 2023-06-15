@@ -324,3 +324,17 @@ unsigned Chromosome::groupsConnected(unsigned group){
 
     return count;
 }
+
+void Chromosome::resetChromosome(BitMap bitmap){
+    fitness = 0;
+    max_group_size = 0;
+
+    createGuards(bitmap);
+    connections_groups = vector<bool>(guards.size()*guards.size(),false);
+    num_groups = guards.size();
+ 
+    initializePoints(bitmap);
+    //cout << "Size points: " << points.size() << endl;
+    initializeConnections(bitmap, 50);
+    calculateFitness(bitmap);
+}

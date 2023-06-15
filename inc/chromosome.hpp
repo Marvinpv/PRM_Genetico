@@ -108,6 +108,8 @@ class Chromosome{
 
         unsigned groupsConnected(unsigned group);
 
+        void resetChromosome(BitMap bitmap);
+
 };
 
 #endif

@@ -1,7 +1,7 @@
 OBJ=obj
 BIN=bin
 SRC=src
-INC=include
+INC=inc
 TEST = test
 
 
@@ -30,6 +30,9 @@ $(OBJ)/point.o: $(SRC)/point.cpp $(INC)/point.hpp
 $(OBJ)/chromosome.o: $(SRC)/chromosome.cpp $(INC)/chromosome.hpp $(INC)/utilities.hpp $(SRC)/utilities.cpp
 	g++ -ggdb -Wall -c -o $(OBJ)/chromosome.o -I$(INC) $(SRC)/chromosome.cpp
 	
+$(OBJ)/agg.o : $(SRC)/agg.cpp $(INC)/agg.hpp $(INC)/chromosome.hpp $(SRC)/chromosome.cpp 
+	g++ -ggdb -Wall -c -o $(OBJ)/agg.o -I$(INC) $(SRC)/agg.cpp
+
 
 $(OBJ)/utilities.o : $(SRC)/utilities.cpp $(INC)/utilities.hpp
 	g++ -ggdb -Wall -c -o $(OBJ)/utilities.o -I$(INC) $(SRC)/utilities.cpp

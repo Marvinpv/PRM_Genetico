@@ -6,7 +6,7 @@
 using namespace std;
 
 int main(void){
-    string path = "./maps/room1_smoothed.pgm"; 
+    string path = "../maps/room1_smoothed.pgm"; 
     BitMap mapa_prueba(path);
     cout<<"Rows: " << mapa_prueba.getRows() << " Cols: " <<mapa_prueba.getCols() << endl;
 
@@ -20,7 +20,7 @@ int main(void){
     mapa_prueba.inflateObstacles(10);
     unsigned dist;
     mapa_prueba.checkCollision(Point(100,100),Point(7,280),dist);
-    mapa_prueba.writeBitMap("./maps/room1_inflated.pgm");
+    mapa_prueba.writeBitMap("../maps/room1_inflated.pgm");
     
 
     Chromosome c(10,mapa_prueba);
@@ -67,7 +67,7 @@ int main(void){
     cout << "Connected components in graph: " << c.checkConnectedGroupComponentsNr() << endl;
     cout << "Fitness: " << c.getFitness() << endl;
 
-    string command = "python3 src/check_groups.py "
+    string command = "python3 ../src/check_groups.py "
                     + points_x
                     + " "
                     + points_y
