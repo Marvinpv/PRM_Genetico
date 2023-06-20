@@ -11,7 +11,7 @@
 						1,
 						2
 					],
-					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"jsonFile" : "directory-.-f5ebdc15457944623624.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.10"
@@ -22,12 +22,13 @@
 					[
 						0,
 						1,
-						2
+						2,
+						3
 					]
 				},
 				{
 					"build" : "src",
-					"jsonFile" : "directory-src-Debug-b6cf2213fc5053b67c22.json",
+					"jsonFile" : "directory-src-b6cf2213fc5053b67c22.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.10"
@@ -38,7 +39,7 @@
 				},
 				{
 					"build" : "tests",
-					"jsonFile" : "directory-tests-Debug-b01f6abb0ab61427ef3b.json",
+					"jsonFile" : "directory-tests-b01f6abb0ab61427ef3b.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.10"
@@ -48,7 +49,7 @@
 					"source" : "tests"
 				}
 			],
-			"name" : "Debug",
+			"name" : "",
 			"projects" : 
 			[
 				{
@@ -63,7 +64,8 @@
 					[
 						0,
 						1,
-						2
+						2,
+						3
 					]
 				}
 			],
@@ -72,21 +74,28 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "fitness_test::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-fitness_test-Debug-28fe0a973578dd62c62b.json",
+					"jsonFile" : "target-fitness_test-d4c9a45c21b2e4fda1b0.json",
 					"name" : "fitness_test",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
+					"id" : "main_age::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-main_age-8ce68b8ec87f88875b81.json",
+					"name" : "main_age",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
 					"id" : "main_agg::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-main_agg-Debug-5b61f9d18687a129ec79.json",
+					"jsonFile" : "target-main_agg-3d4d3be3657744caf10a.json",
 					"name" : "main_agg",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "test::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-test-Debug-538e6dec77f14f206435.json",
+					"jsonFile" : "target-test-5d3d483a47a480478d26.json",
 					"name" : "test",
 					"projectIndex" : 0
 				}

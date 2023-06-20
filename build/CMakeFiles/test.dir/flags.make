@@ -6,5 +6,5 @@ CXX_DEFINES = -D_DISABLE_EXTENDED_ALIGNED_STORAGE
 
 CXX_INCLUDES = -I/home/marvin/UGR/TFG/PRM_Genetico/inc
 
-CXX_FLAGS =  -O2 -g -std=gnu++14
+CXX_FLAGS =  -O2 -std=gnu++14
 

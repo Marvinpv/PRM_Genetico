@@ -25,7 +25,7 @@ if sys.argv[n_groups + 5] != "None":
     connections = np.array(list(sys.argv[n_groups + 5].split(',')[:-1]),dtype=int)
     connections = np.reshape(connections,(connections.size//2,2))
 
-im = plt.imread('../maps/room3_inflated.pgm')
+im = plt.imread('../maps/room2_inflated.pgm')
 implot = plt.imshow(im)
 for i in range(n_groups):
     print('Grupo',i,':',groups[i])

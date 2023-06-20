@@ -200,11 +200,12 @@ void Chromosome::initializeConnections(BitMap bitmap, unsigned dist_threshold){
                 bool collision = bitmap.checkCollision(points[i],points[j],dist); 
                 if(!collision /*&& dist < dist_threshold*/){
                     createConnection(i,j);
-                    if(points[i].getType() == TypePoint::Group && points[j].getType() == TypePoint::Group && !points[i].checkGroup(*points[j].getGroups().begin()) && !checkGroupConnection(*points[i].getGroups().begin(),*points[j].getGroups().begin())){
-                        unsigned g1 = *points[i].getGroups().begin(), g2 = *points[j].getGroups().begin(); 
+                    unsigned g1 = *points[i].getGroups().begin(), g2 = *points[j].getGroups().begin();
+                    if(points[i].getType() == TypePoint::Group && points[j].getType() == TypePoint::Group && !points[i].checkGroup(*points[j].getGroups().begin()) && !checkGroupConnection(*points[i].getGroups().begin(),*points[j].getGroups().begin()) && i != guards[g1] && j != guards[g2]){
                         setGroupConnection(g1,g2,true);
                         points[i].addGroup(g2);
                         points[j].addGroup(g1);
+                        
                     }
                     connections++;
                 }/*else if(!collision && dist < min_dist){
@@ -390,7 +391,7 @@ void Chromosome::calculateFitness(BitMap bitmap, bool debug ){
         //double area = groupArea(i);
 
         double component = /*area +*/ (avg)/(variance)+1.0/((component_points));
-        component *= groups_connected*groups_connected/groups[i].size();
+        component *= groups_connected*groups_connected;
         if(debug)
             cout << "avg: " << avg <<", var: " << variance << ", group size: " << groups[i].size() << ", connective: " << connective <<",groups connected: "<< groups_connected <<", component: "<< component<< endl;
         /*if(connective > groups[i].size()/2.0)
@@ -400,8 +401,8 @@ void Chromosome::calculateFitness(BitMap bitmap, bool debug ){
         
     }
     unsigned connectedComponents = checkConnectedGroupComponentsNr();
-    //if(connectedComponents > 1)
-    //    fitness/=(double)(connectedComponents);
+    if(connectedComponents > 1)
+        fitness/=(double)(connectedComponents);
 }
 
 unsigned Chromosome::groupsConnected(unsigned group){

@@ -7,11 +7,11 @@
 using namespace std;
 
 int main(void){
-    string path = "../maps/room4_smoothed.pgm"; 
+    string path = "../maps/room3_smoothed.pgm"; 
     BitMap mapa_prueba(path);
     cout<<"Rows: " << mapa_prueba.getRows() << " Cols: " <<mapa_prueba.getCols() << endl;
 
-    AGG a(mapa_prueba,50,25);
+    AGG a(mapa_prueba,50,20);
 
     for(unsigned i = 0 ; i < mapa_prueba.getRows() ; i++){
         for(unsigned j = 0 ; j < mapa_prueba.getCols() ; j++){
@@ -23,10 +23,10 @@ int main(void){
     //mapa_prueba.inflateObstacles(10);
     unsigned dist;
     mapa_prueba.checkCollision(Point(100,100),Point(7,280),dist);
-    mapa_prueba.writeBitMap("../maps/room4_inflated.pgm");
+    mapa_prueba.writeBitMap("../maps/room3_inflated.pgm");
     
 
-    Chromosome c(10,mapa_prueba);
+    Chromosome c(40,mapa_prueba);
     cout <<"size: " <<c.getNumPoints()<<endl;
     string points_x = "";
     string points_y = "";

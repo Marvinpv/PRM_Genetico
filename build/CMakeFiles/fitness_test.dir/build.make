@@ -83,10 +83,24 @@ CMakeFiles/fitness_test.dir/tests/fitness_test.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/fitness_test.dir/tests/fitness_test.cpp.s"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/marvin/UGR/TFG/PRM_Genetico/tests/fitness_test.cpp -o CMakeFiles/fitness_test.dir/tests/fitness_test.cpp.s
 
+CMakeFiles/fitness_test.dir/src/age.cpp.o: CMakeFiles/fitness_test.dir/flags.make
+CMakeFiles/fitness_test.dir/src/age.cpp.o: ../src/age.cpp
+CMakeFiles/fitness_test.dir/src/age.cpp.o: CMakeFiles/fitness_test.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marvin/UGR/TFG/PRM_Genetico/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/fitness_test.dir/src/age.cpp.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/fitness_test.dir/src/age.cpp.o -MF CMakeFiles/fitness_test.dir/src/age.cpp.o.d -o CMakeFiles/fitness_test.dir/src/age.cpp.o -c /home/marvin/UGR/TFG/PRM_Genetico/src/age.cpp
+
+CMakeFiles/fitness_test.dir/src/age.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/fitness_test.dir/src/age.cpp.i"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/marvin/UGR/TFG/PRM_Genetico/src/age.cpp > CMakeFiles/fitness_test.dir/src/age.cpp.i
+
+CMakeFiles/fitness_test.dir/src/age.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/fitness_test.dir/src/age.cpp.s"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/marvin/UGR/TFG/PRM_Genetico/src/age.cpp -o CMakeFiles/fitness_test.dir/src/age.cpp.s
+
 CMakeFiles/fitness_test.dir/src/agg.cpp.o: CMakeFiles/fitness_test.dir/flags.make
 CMakeFiles/fitness_test.dir/src/agg.cpp.o: ../src/agg.cpp
 CMakeFiles/fitness_test.dir/src/agg.cpp.o: CMakeFiles/fitness_test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marvin/UGR/TFG/PRM_Genetico/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/fitness_test.dir/src/agg.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marvin/UGR/TFG/PRM_Genetico/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/fitness_test.dir/src/agg.cpp.o"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/fitness_test.dir/src/agg.cpp.o -MF CMakeFiles/fitness_test.dir/src/agg.cpp.o.d -o CMakeFiles/fitness_test.dir/src/agg.cpp.o -c /home/marvin/UGR/TFG/PRM_Genetico/src/agg.cpp
 
 CMakeFiles/fitness_test.dir/src/agg.cpp.i: cmake_force
@@ -100,7 +114,7 @@ CMakeFiles/fitness_test.dir/src/agg.cpp.s: cmake_force
 CMakeFiles/fitness_test.dir/src/bitmap.cpp.o: CMakeFiles/fitness_test.dir/flags.make
 CMakeFiles/fitness_test.dir/src/bitmap.cpp.o: ../src/bitmap.cpp
 CMakeFiles/fitness_test.dir/src/bitmap.cpp.o: CMakeFiles/fitness_test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marvin/UGR/TFG/PRM_Genetico/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/fitness_test.dir/src/bitmap.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marvin/UGR/TFG/PRM_Genetico/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/fitness_test.dir/src/bitmap.cpp.o"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/fitness_test.dir/src/bitmap.cpp.o -MF CMakeFiles/fitness_test.dir/src/bitmap.cpp.o.d -o CMakeFiles/fitness_test.dir/src/bitmap.cpp.o -c /home/marvin/UGR/TFG/PRM_Genetico/src/bitmap.cpp
 
 CMakeFiles/fitness_test.dir/src/bitmap.cpp.i: cmake_force
@@ -114,7 +128,7 @@ CMakeFiles/fitness_test.dir/src/bitmap.cpp.s: cmake_force
 CMakeFiles/fitness_test.dir/src/chromosome.cpp.o: CMakeFiles/fitness_test.dir/flags.make
 CMakeFiles/fitness_test.dir/src/chromosome.cpp.o: ../src/chromosome.cpp
 CMakeFiles/fitness_test.dir/src/chromosome.cpp.o: CMakeFiles/fitness_test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marvin/UGR/TFG/PRM_Genetico/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/fitness_test.dir/src/chromosome.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marvin/UGR/TFG/PRM_Genetico/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/fitness_test.dir/src/chromosome.cpp.o"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/fitness_test.dir/src/chromosome.cpp.o -MF CMakeFiles/fitness_test.dir/src/chromosome.cpp.o.d -o CMakeFiles/fitness_test.dir/src/chromosome.cpp.o -c /home/marvin/UGR/TFG/PRM_Genetico/src/chromosome.cpp
 
 CMakeFiles/fitness_test.dir/src/chromosome.cpp.i: cmake_force
@@ -128,7 +142,7 @@ CMakeFiles/fitness_test.dir/src/chromosome.cpp.s: cmake_force
 CMakeFiles/fitness_test.dir/src/imageES.cpp.o: CMakeFiles/fitness_test.dir/flags.make
 CMakeFiles/fitness_test.dir/src/imageES.cpp.o: ../src/imageES.cpp
 CMakeFiles/fitness_test.dir/src/imageES.cpp.o: CMakeFiles/fitness_test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marvin/UGR/TFG/PRM_Genetico/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/fitness_test.dir/src/imageES.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marvin/UGR/TFG/PRM_Genetico/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/fitness_test.dir/src/imageES.cpp.o"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/fitness_test.dir/src/imageES.cpp.o -MF CMakeFiles/fitness_test.dir/src/imageES.cpp.o.d -o CMakeFiles/fitness_test.dir/src/imageES.cpp.o -c /home/marvin/UGR/TFG/PRM_Genetico/src/imageES.cpp
 
 CMakeFiles/fitness_test.dir/src/imageES.cpp.i: cmake_force
@@ -142,7 +156,7 @@ CMakeFiles/fitness_test.dir/src/imageES.cpp.s: cmake_force
 CMakeFiles/fitness_test.dir/src/main.cpp.o: CMakeFiles/fitness_test.dir/flags.make
 CMakeFiles/fitness_test.dir/src/main.cpp.o: ../src/main.cpp
 CMakeFiles/fitness_test.dir/src/main.cpp.o: CMakeFiles/fitness_test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marvin/UGR/TFG/PRM_Genetico/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/fitness_test.dir/src/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marvin/UGR/TFG/PRM_Genetico/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/fitness_test.dir/src/main.cpp.o"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/fitness_test.dir/src/main.cpp.o -MF CMakeFiles/fitness_test.dir/src/main.cpp.o.d -o CMakeFiles/fitness_test.dir/src/main.cpp.o -c /home/marvin/UGR/TFG/PRM_Genetico/src/main.cpp
 
 CMakeFiles/fitness_test.dir/src/main.cpp.i: cmake_force
@@ -156,7 +170,7 @@ CMakeFiles/fitness_test.dir/src/main.cpp.s: cmake_force
 CMakeFiles/fitness_test.dir/src/point.cpp.o: CMakeFiles/fitness_test.dir/flags.make
 CMakeFiles/fitness_test.dir/src/point.cpp.o: ../src/point.cpp
 CMakeFiles/fitness_test.dir/src/point.cpp.o: CMakeFiles/fitness_test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marvin/UGR/TFG/PRM_Genetico/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/fitness_test.dir/src/point.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marvin/UGR/TFG/PRM_Genetico/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/fitness_test.dir/src/point.cpp.o"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/fitness_test.dir/src/point.cpp.o -MF CMakeFiles/fitness_test.dir/src/point.cpp.o.d -o CMakeFiles/fitness_test.dir/src/point.cpp.o -c /home/marvin/UGR/TFG/PRM_Genetico/src/point.cpp
 
 CMakeFiles/fitness_test.dir/src/point.cpp.i: cmake_force
@@ -170,7 +184,7 @@ CMakeFiles/fitness_test.dir/src/point.cpp.s: cmake_force
 CMakeFiles/fitness_test.dir/src/prm_utilities.cpp.o: CMakeFiles/fitness_test.dir/flags.make
 CMakeFiles/fitness_test.dir/src/prm_utilities.cpp.o: ../src/prm_utilities.cpp
 CMakeFiles/fitness_test.dir/src/prm_utilities.cpp.o: CMakeFiles/fitness_test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marvin/UGR/TFG/PRM_Genetico/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/fitness_test.dir/src/prm_utilities.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marvin/UGR/TFG/PRM_Genetico/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/fitness_test.dir/src/prm_utilities.cpp.o"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/fitness_test.dir/src/prm_utilities.cpp.o -MF CMakeFiles/fitness_test.dir/src/prm_utilities.cpp.o.d -o CMakeFiles/fitness_test.dir/src/prm_utilities.cpp.o -c /home/marvin/UGR/TFG/PRM_Genetico/src/prm_utilities.cpp
 
 CMakeFiles/fitness_test.dir/src/prm_utilities.cpp.i: cmake_force
@@ -184,6 +198,7 @@ CMakeFiles/fitness_test.dir/src/prm_utilities.cpp.s: cmake_force
 # Object files for target fitness_test
 fitness_test_OBJECTS = \
 "CMakeFiles/fitness_test.dir/tests/fitness_test.cpp.o" \
+"CMakeFiles/fitness_test.dir/src/age.cpp.o" \
 "CMakeFiles/fitness_test.dir/src/agg.cpp.o" \
 "CMakeFiles/fitness_test.dir/src/bitmap.cpp.o" \
 "CMakeFiles/fitness_test.dir/src/chromosome.cpp.o" \
@@ -196,6 +211,7 @@ fitness_test_OBJECTS = \
 fitness_test_EXTERNAL_OBJECTS =
 
 fitness_test: CMakeFiles/fitness_test.dir/tests/fitness_test.cpp.o
+fitness_test: CMakeFiles/fitness_test.dir/src/age.cpp.o
 fitness_test: CMakeFiles/fitness_test.dir/src/agg.cpp.o
 fitness_test: CMakeFiles/fitness_test.dir/src/bitmap.cpp.o
 fitness_test: CMakeFiles/fitness_test.dir/src/chromosome.cpp.o
@@ -205,7 +221,7 @@ fitness_test: CMakeFiles/fitness_test.dir/src/point.cpp.o
 fitness_test: CMakeFiles/fitness_test.dir/src/prm_utilities.cpp.o
 fitness_test: CMakeFiles/fitness_test.dir/build.make
 fitness_test: CMakeFiles/fitness_test.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/marvin/UGR/TFG/PRM_Genetico/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable fitness_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/marvin/UGR/TFG/PRM_Genetico/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable fitness_test"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/fitness_test.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

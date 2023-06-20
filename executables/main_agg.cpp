@@ -7,7 +7,7 @@
 using namespace std;
 
 int main(void){
-    string path = "../maps/room3_smoothed.pgm"; 
+    string path = "../maps/room2_smoothed.pgm"; 
     BitMap mapa_prueba(path);
     cout<<"Rows: " << mapa_prueba.getRows() << " Cols: " <<mapa_prueba.getCols() << endl;
 
@@ -23,9 +23,9 @@ int main(void){
     //mapa_prueba.inflateObstacles(10);
     unsigned dist;
     //mapa_prueba.checkCollision(Point(100,100),Point(7,280),dist);
-    mapa_prueba.writeBitMap("../maps/room3_inflated.pgm");
+    mapa_prueba.writeBitMap("../maps/room2_inflated.pgm");
     
-    AGG a(mapa_prueba,50,15);
+    AGG a(mapa_prueba,50,10);
 
     Chromosome c(a.optimize());
     cout <<"size: " <<c.getNumPoints()<<endl;
@@ -45,10 +45,10 @@ int main(void){
                 if(c.getPoint(j).getType() == TypePoint::Connective)
                     connective_group += to_string(j) + ",";
             }
-            cout << "Groups point "<< j << ":";
+            /*cout << "Groups point "<< j << ":";
             for(set<unsigned>::iterator it = c.getPoint(j).getGroups().begin(); it != c.getPoint(j).getGroups().end() ; it++)
                 cout << *it << ",";
-            cout << endl;
+            cout << endl;*/
 
             if(c.getPoint(j).checkGroup(i) && c.getPoint(j).getType() == TypePoint::Group){
                 groups_str[i] += to_string(j) + ",";

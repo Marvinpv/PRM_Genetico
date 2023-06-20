@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/fitness_test.dir/src/age.cpp.o"
+  "CMakeFiles/fitness_test.dir/src/age.cpp.o.d"
   "CMakeFiles/fitness_test.dir/src/agg.cpp.o"
   "CMakeFiles/fitness_test.dir/src/agg.cpp.o.d"
   "CMakeFiles/fitness_test.dir/src/bitmap.cpp.o"

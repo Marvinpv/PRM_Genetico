@@ -86,7 +86,7 @@ Chromosome AGG::optimize(){
         cross();
         mutation();
         replacement();
-        cout << "Evals: " << evals << endl;
+        //cout << "Evals: " << evals << endl;
     }
 
     unsigned best_chrom = 0;

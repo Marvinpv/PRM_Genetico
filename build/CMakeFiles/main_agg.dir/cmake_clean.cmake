@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/main_agg.dir/executables/main_agg.cpp.o"
   "CMakeFiles/main_agg.dir/executables/main_agg.cpp.o.d"
+  "CMakeFiles/main_agg.dir/src/age.cpp.o"
+  "CMakeFiles/main_agg.dir/src/age.cpp.o.d"
   "CMakeFiles/main_agg.dir/src/agg.cpp.o"
   "CMakeFiles/main_agg.dir/src/agg.cpp.o.d"
   "CMakeFiles/main_agg.dir/src/bitmap.cpp.o"

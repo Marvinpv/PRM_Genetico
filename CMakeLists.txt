@@ -19,6 +19,7 @@ file(GLOB SOURCES "src/*.cpp")
 
 # Agregar el ejecutable main_agg
 add_executable(main_agg ${CMAKE_SOURCE_DIR}/executables/main_agg.cpp ${SOURCES})
+add_executable(main_age ${CMAKE_SOURCE_DIR}/executables/main_age.cpp ${SOURCES})
 
 foreach(TEST_SOURCE ${TEST_SOURCES})
     # Obtiene el nombre base del archivo sin la extensión
