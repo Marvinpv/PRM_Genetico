@@ -2,13 +2,16 @@
 #include <bitmap.hpp>
 #include <string>
 #include <chromosome.hpp>
+#include <agg.hpp>
 
 using namespace std;
 
 int main(void){
-    string path = "../maps/room1_smoothed.pgm"; 
+    string path = "../maps/room4_smoothed.pgm"; 
     BitMap mapa_prueba(path);
     cout<<"Rows: " << mapa_prueba.getRows() << " Cols: " <<mapa_prueba.getCols() << endl;
+
+    AGG a(mapa_prueba,50,25);
 
     for(unsigned i = 0 ; i < mapa_prueba.getRows() ; i++){
         for(unsigned j = 0 ; j < mapa_prueba.getCols() ; j++){
@@ -17,10 +20,10 @@ int main(void){
         //cout << endl;
     }
     
-    mapa_prueba.inflateObstacles(10);
+    //mapa_prueba.inflateObstacles(10);
     unsigned dist;
     mapa_prueba.checkCollision(Point(100,100),Point(7,280),dist);
-    mapa_prueba.writeBitMap("../maps/room1_inflated.pgm");
+    mapa_prueba.writeBitMap("../maps/room4_inflated.pgm");
     
 
     Chromosome c(10,mapa_prueba);
@@ -65,6 +68,7 @@ int main(void){
     cout << "Points y: " << points_y << endl;
     //cout << "Connections: " << connections << endl;
     cout << "Connected components in graph: " << c.checkConnectedGroupComponentsNr() << endl;
+    c.calculateFitness(mapa_prueba, true);
     cout << "Fitness: " << c.getFitness() << endl;
 
     string command = "python3 ../src/check_groups.py "

@@ -4,7 +4,7 @@
 #include <constants.hpp>
 #include <iostream>
 #include <math.h>
-#include <utilities.hpp>
+#include <prm_utilities.hpp>
 
 using namespace std;
 // get base random alias which is auto seeded and has static API and internal state
@@ -23,6 +23,13 @@ void Chromosome::createConnection(unsigned i, unsigned j){
         connections[i*num_points + j] = true;
         connections[j*num_points + i] = true;
     }   
+}
+
+void Chromosome::setConnection(unsigned i, unsigned j, bool val){
+    if(i >=0 && i < num_points && j >= 0 && j < num_points){
+        connections[i*num_points + j] = val;
+        connections[j*num_points + i] = val;
+    } 
 }
 
 Chromosome::Chromosome(unsigned n_points, BitMap bitmap){
@@ -87,9 +94,9 @@ void Chromosome::initializePoints(BitMap bitmap){
         unsigned j = 0;
         for(vector<unsigned>::iterator it_guards = guards.begin() ; it_guards != guards.end() ; it_guards++){
             unsigned dist;
-            if(i != *it_guards && !bitmap.checkCollision(points[i],points[*it_guards],dist)){
+            if(i != *it_guards && (checkConnection(i,j) || !bitmap.checkCollision(points[i],points[*it_guards],dist))){
                 //createConnection(i,*it_guards);
-                if(points[i].groups.empty()){ //If it only visits this, this will be a guard of a group 
+                if(points[i].getGroups().empty()){ //If it only visits this, this will be a guard of a group 
                     points[i].addGroup(j);
                     groups[j].insert(i);
                     points[i].setType(TypePoint::Group);
@@ -109,6 +116,72 @@ void Chromosome::initializePoints(BitMap bitmap){
         }
         //cout << endl;
     }
+
+}
+
+void Chromosome::initializeNewPoint(unsigned newPoint, BitMap bitmap){
+
+    //Clear all connections
+    for(unsigned i = 0 ; i < points.size() ; i++){
+        setConnection(i,newPoint,false);
+    }
+    
+    for(set<unsigned>::iterator it = points[newPoint].getGroups().begin() ; it != points[newPoint].getGroups().end() ; it++){
+        groups[*it].erase(newPoint);
+    }
+
+    points[newPoint].getGroups().clear();
+    
+
+
+    unsigned j = 0;
+    for(vector<unsigned>::iterator it_guards = guards.begin() ; it_guards != guards.end() ; it_guards++){
+        unsigned dist;
+        if(!bitmap.checkCollision(points[newPoint],points[*it_guards],dist)){
+            //createConnection(i,*it_guards);
+            if(points[newPoint].getGroups().empty()){ //If it only visits this, this will be a guard of a group 
+                points[newPoint].addGroup(j);
+                groups[j].insert(newPoint);
+                points[newPoint].setType(TypePoint::Group);
+            }else{ // It creates a connection between guards
+                points[newPoint].addGroup(j);
+                groups[j].insert(newPoint);
+                points[newPoint].setType(TypePoint::Connective); 
+                connectGroupsFromConnective(points[newPoint]);
+            }
+            if(groups[j].size() > max_group_size){
+                max_group_size = groups[j].size();
+            }
+        }
+        j++;
+    }
+
+    if(points[newPoint].getGroups().empty()){ // new point is a guard
+        guards.push_back(newPoint);
+        points[newPoint].setType(TypePoint::Group);
+        points[newPoint].addGroup(guards.size() - 1);
+        groups.push_back(set<unsigned>());
+        groups[groups.size() - 1].insert(newPoint);
+    }
+
+    for(unsigned j = 0 ; j < points.size() ; j++){
+        if(newPoint != j){
+            unsigned dist;
+            bool collision = bitmap.checkCollision(points[newPoint],points[j],dist); 
+            if(!collision /*&& dist < dist_threshold*/){
+                createConnection(newPoint,j);
+                if(points[newPoint].getType() == TypePoint::Group && points[j].getType() == TypePoint::Group && !points[newPoint].checkGroup(*points[j].getGroups().begin()) && !checkGroupConnection(*points[newPoint].getGroups().begin(),*points[j].getGroups().begin())){
+                    unsigned g1 = *points[newPoint].getGroups().begin(), g2 = *points[j].getGroups().begin(); 
+                    setGroupConnection(g1,g2,true);
+                    points[newPoint].addGroup(g2);
+                    points[j].addGroup(g1);
+                }
+            }
+    
+        }
+    }
+
+    calculateFitness(bitmap);
 
 }
 
@@ -155,7 +228,7 @@ void Chromosome::createGuards(BitMap bitmap){
         bool new_guard = true;
         for(vector<unsigned>::iterator it_guards = guards.begin() ; it_guards != guards.end() ; it_guards++){
             unsigned dist;
-            if(!bitmap.checkCollision(points[i],points[*it_guards],dist)){
+            if(checkConnection(i,j) || !bitmap.checkCollision(points[i],points[*it_guards],dist)){
                 new_guard = false;
             }
             j++;
@@ -170,6 +243,18 @@ void Chromosome::createGuards(BitMap bitmap){
         }
     }
 }
+
+void Chromosome::changeGuard(unsigned new_guard, BitMap bitmap){
+    guards.clear();
+    guards.push_back(new_guard);
+    points[new_guard].setType(TypePoint::Group);
+    points[new_guard].addGroup(guards.size() - 1);
+    groups.push_back(set<unsigned>());
+    groups[groups.size() - 1].insert(new_guard);
+
+    createGuards(bitmap);
+}
+
 
 bool Chromosome::checkGroupConnection(unsigned i ,unsigned j){
     if(i >=0 && i < num_groups && j >= 0 && j < num_groups){
@@ -292,18 +377,22 @@ double Chromosome::varianceDistanceBetweenGroup(unsigned group, double avg){
 
 
 
-void Chromosome::calculateFitness(BitMap bitmap){
+void Chromosome::calculateFitness(BitMap bitmap, bool debug ){
     fitness = 0.;
+
+
     for(unsigned i = 0 ; i < num_groups ; i++){
         double avg = avgDistanceBetweenGroup(i, bitmap); 
         double variance = varianceDistanceBetweenGroup(i,avg);
         unsigned connective = connectivePointsInGroup(i);
         double component_points = normalize((double)connective,0.0,(double)num_points/2.0);
         double groups_connected = (double)groupsConnected(i);
+        //double area = groupArea(i);
 
-        double component = (avg)/(variance)+1.0/((component_points));
-        component *= groups_connected*groups_connected;
-        cout << "avg: " << avg <<", var: " << variance << ", group size: " << groups[i].size() << ", connective: " << connective <<",groups connected: "<< groups_connected <<", component: "<< component<< endl;
+        double component = /*area +*/ (avg)/(variance)+1.0/((component_points));
+        component *= groups_connected*groups_connected/groups[i].size();
+        if(debug)
+            cout << "avg: " << avg <<", var: " << variance << ", group size: " << groups[i].size() << ", connective: " << connective <<",groups connected: "<< groups_connected <<", component: "<< component<< endl;
         /*if(connective > groups[i].size()/2.0)
             fitness -= (groups[i].size()*avg)/(variance*((connective+1)*10));
         else*/
@@ -327,8 +416,19 @@ unsigned Chromosome::groupsConnected(unsigned group){
 
 void Chromosome::resetChromosome(BitMap bitmap){
     fitness = 0;
+    connections = vector<bool>(num_points*num_points,false);
+    guards = vector<unsigned>();
+    groups = vector<set<unsigned>>();
+    num_groups = 0;
+    fitness = 0;
     max_group_size = 0;
 
+    for(vector<Point>::iterator it = points.begin() ; it != points.end() ; it++){
+        it->clearGroups();
+    }
+
+    
+    
     createGuards(bitmap);
     connections_groups = vector<bool>(guards.size()*guards.size(),false);
     num_groups = guards.size();
@@ -337,4 +437,29 @@ void Chromosome::resetChromosome(BitMap bitmap){
     //cout << "Size points: " << points.size() << endl;
     initializeConnections(bitmap, 50);
     calculateFitness(bitmap);
+}
+
+double Chromosome::groupArea(unsigned g){
+    Point lowest_x = Point(points[*groups[g].begin()]), lowest_y = Point(points[*groups[g].begin()]) ,greatest_x = Point(points[*groups[g].begin()]), greatest_y = Point(points[*groups[g].begin()]);
+    for(set<unsigned>::iterator it = groups[g].begin() ; it != groups[g].end() ; it++){
+        if(points[*it].getX() < lowest_x.getX())
+            lowest_x = Point(points[*it]);
+        
+        if(points[*it].getY() < lowest_y.getY())
+            lowest_y = Point(points[*it]);
+
+        if(points[*it].getX() > greatest_x.getX())
+            greatest_x = Point(points[*it]);
+
+        if(points[*it].getY() > greatest_y.getY())
+            greatest_y = Point(points[*it]);
+
+    }
+
+    double area = lowest_x.getDistance(greatest_x)
+                + greatest_x.getDistance(lowest_y)
+                + lowest_y.getDistance(greatest_y)
+                + greatest_y.getDistance(lowest_x);
+    
+    return area;
 }

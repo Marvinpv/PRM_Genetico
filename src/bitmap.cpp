@@ -13,6 +13,7 @@ BitMap::BitMap(string path_file){
 unsigned char BitMap::getIndex(unsigned i, unsigned j){
     if(i >= 0 && i < rows && j>=0 && j < cols)
         return map[i*cols + j];
+        
     return 0;
 }
 

@@ -41,10 +41,14 @@ class Chromosome{
             fitness = 0;
         }
 
-        Chromosome(Chromosome & other){
+        Chromosome(const Chromosome & other){
             num_points = other.num_points;
             points = vector<Point>(other.points);
             connections = vector<bool>(other.connections);
+            guards = vector<unsigned>(other.guards);
+            groups = vector<set<unsigned>>(other.groups);
+            num_groups = other.num_groups;
+            connections_groups = vector<bool>(other.connections_groups);
             //connections_groups = vector<bool>(other.connections_groups);
             fitness = other.fitness;
         }
@@ -74,17 +78,46 @@ class Chromosome{
             return fitness;
         }
 
+        vector<Point> getPointsCopy(){
+            return vector<Point>(points);
+        }
+
+        vector<unsigned> &getGuards(){
+            return guards;
+        }
+
+        void deleteGuard(vector<unsigned>::iterator &g){
+            guards.erase(g);
+        }
+
+        vector<unsigned>::iterator isGuard(unsigned i){
+            for (auto it = guards.begin(); it != guards.end(); it++) {
+                if (*it == i) {
+                    return it;
+                }
+            }
+            return guards.end();
+        }
+
+        void changeGuard(unsigned new_guard, BitMap bitmap);
+        
+        void initializeNewPoint(unsigned newPoint, BitMap bitmap);
+
         Chromosome(unsigned n_points, BitMap bitmap);
 
         Chromosome(vector<Point> p, BitMap bitmap);
 
         void initializePoints(BitMap bitmap);
 
+        double groupArea(unsigned g);
+
         bool checkConnection(unsigned i, unsigned j);
 
-        void createConnection(unsigned i, unsigned j);        
+        void createConnection(unsigned i, unsigned j);   
 
-        void calculateFitness(BitMap bitmap);
+        void setConnection(unsigned i, unsigned j, bool val);     
+
+        void calculateFitness(BitMap bitmap, bool debug=false);
 
         void initializeConnections(BitMap bitmap, unsigned dist_threshold);
 

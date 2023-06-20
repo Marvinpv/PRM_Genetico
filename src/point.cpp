@@ -29,6 +29,6 @@ bool Point::checkGroup(unsigned g){
     return groups.count(g) > 0;
 }
 
-double Point::getDistance(Point &other){
+const double Point::getDistance(Point &other){
     return sqrt((x - other.getX())*(x - other.getX()) + (y - other.getY())*(y - other.getY()));
 }
