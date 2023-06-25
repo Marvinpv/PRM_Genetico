@@ -115,7 +115,9 @@ int main(){
         command += " " + connections;  
     }
     
-    
+    command += "../maps/room1_inflated.pgm";
+
+    command += " " + to_string(c.getFitness());
     //cout << "Comand: " << command <<endl;
 
     int ret = system(command.c_str());

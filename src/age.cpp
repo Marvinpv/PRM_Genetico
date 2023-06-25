@@ -11,7 +11,7 @@ AGE::AGE(BitMap bm, unsigned p_size, unsigned n_points){
     bitmap = bm;
     num_points = n_points;
     population = vector<Chromosome>();
-    for(unsigned i = 0 ; i < num_points ; i++){
+    for(unsigned i = 0 ; i < p_size ; i++){
         Chromosome c(num_points, bitmap);
         population.push_back(c);
     }
@@ -112,13 +112,16 @@ void AGE::replacement(){
 }
 
 Chromosome AGE::optimize(){
-
+    double progress = 0.;
     while(evals < NUM_EVALS){
         selection();
         cross();
         mutation();
         replacement();
         //cout << "Evals: " << evals << endl;
+
+        showProgressBar(progress);
+        progress = (double)evals/(double)NUM_EVALS;
     }
 
     unsigned best_chrom = 0;

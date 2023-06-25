@@ -1,5 +1,7 @@
 /home/marvin/UGR/TFG/PRM_Genetico/build/CMakeFiles/main_agg.dir
 /home/marvin/UGR/TFG/PRM_Genetico/build/CMakeFiles/main_age.dir
+/home/marvin/UGR/TFG/PRM_Genetico/build/CMakeFiles/main_shade.dir
+/home/marvin/UGR/TFG/PRM_Genetico/build/CMakeFiles/main_vis_graph.dir
 /home/marvin/UGR/TFG/PRM_Genetico/build/CMakeFiles/fitness_test.dir
 /home/marvin/UGR/TFG/PRM_Genetico/build/CMakeFiles/test.dir
 /home/marvin/UGR/TFG/PRM_Genetico/build/CMakeFiles/edit_cache.dir

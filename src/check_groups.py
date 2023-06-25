@@ -25,7 +25,11 @@ if sys.argv[n_groups + 5] != "None":
     connections = np.array(list(sys.argv[n_groups + 5].split(',')[:-1]),dtype=int)
     connections = np.reshape(connections,(connections.size//2,2))
 
-im = plt.imread('../maps/room2_inflated.pgm')
+path_img = sys.argv[n_groups + 6]
+
+fitness = sys.argv[n_groups + 7]
+
+im = plt.imread(path_img)
 implot = plt.imshow(im)
 for i in range(n_groups):
     print('Grupo',i,':',groups[i])
@@ -40,5 +44,7 @@ for i in range(connections.shape[0]):
     x_values = [points_x[connections[i,0]],points_x[connections[i,1]]]
     plt.plot(y_values,x_values,linestyle='--')
 
+
+plt.title('Fitness: ' + fitness)
 plt.legend()
 plt.show()

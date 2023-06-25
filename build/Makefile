@@ -143,6 +143,32 @@ main_age/fast:
 .PHONY : main_age/fast
 
 #=============================================================================
+# Target rules for targets named main_shade
+
+# Build rule for target.
+main_shade: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main_shade
+.PHONY : main_shade
+
+# fast build rule for target.
+main_shade/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_shade.dir/build.make CMakeFiles/main_shade.dir/build
+.PHONY : main_shade/fast
+
+#=============================================================================
+# Target rules for targets named main_vis_graph
+
+# Build rule for target.
+main_vis_graph: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main_vis_graph
+.PHONY : main_vis_graph
+
+# fast build rule for target.
+main_vis_graph/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_vis_graph.dir/build.make CMakeFiles/main_vis_graph.dir/build
+.PHONY : main_vis_graph/fast
+
+#=============================================================================
 # Target rules for targets named fitness_test
 
 # Build rule for target.
@@ -216,6 +242,54 @@ executables/main_agg.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_agg.dir/build.make CMakeFiles/main_agg.dir/executables/main_agg.cpp.s
 .PHONY : executables/main_agg.cpp.s
 
+executables/main_shade.o: executables/main_shade.cpp.o
+.PHONY : executables/main_shade.o
+
+# target to build an object file
+executables/main_shade.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_shade.dir/build.make CMakeFiles/main_shade.dir/executables/main_shade.cpp.o
+.PHONY : executables/main_shade.cpp.o
+
+executables/main_shade.i: executables/main_shade.cpp.i
+.PHONY : executables/main_shade.i
+
+# target to preprocess a source file
+executables/main_shade.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_shade.dir/build.make CMakeFiles/main_shade.dir/executables/main_shade.cpp.i
+.PHONY : executables/main_shade.cpp.i
+
+executables/main_shade.s: executables/main_shade.cpp.s
+.PHONY : executables/main_shade.s
+
+# target to generate assembly for a file
+executables/main_shade.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_shade.dir/build.make CMakeFiles/main_shade.dir/executables/main_shade.cpp.s
+.PHONY : executables/main_shade.cpp.s
+
+executables/main_vis_graph.o: executables/main_vis_graph.cpp.o
+.PHONY : executables/main_vis_graph.o
+
+# target to build an object file
+executables/main_vis_graph.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_vis_graph.dir/build.make CMakeFiles/main_vis_graph.dir/executables/main_vis_graph.cpp.o
+.PHONY : executables/main_vis_graph.cpp.o
+
+executables/main_vis_graph.i: executables/main_vis_graph.cpp.i
+.PHONY : executables/main_vis_graph.i
+
+# target to preprocess a source file
+executables/main_vis_graph.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_vis_graph.dir/build.make CMakeFiles/main_vis_graph.dir/executables/main_vis_graph.cpp.i
+.PHONY : executables/main_vis_graph.cpp.i
+
+executables/main_vis_graph.s: executables/main_vis_graph.cpp.s
+.PHONY : executables/main_vis_graph.s
+
+# target to generate assembly for a file
+executables/main_vis_graph.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_vis_graph.dir/build.make CMakeFiles/main_vis_graph.dir/executables/main_vis_graph.cpp.s
+.PHONY : executables/main_vis_graph.cpp.s
+
 src/age.o: src/age.cpp.o
 .PHONY : src/age.o
 
@@ -223,6 +297,8 @@ src/age.o: src/age.cpp.o
 src/age.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_agg.dir/build.make CMakeFiles/main_agg.dir/src/age.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_age.dir/build.make CMakeFiles/main_age.dir/src/age.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_shade.dir/build.make CMakeFiles/main_shade.dir/src/age.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_vis_graph.dir/build.make CMakeFiles/main_vis_graph.dir/src/age.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/fitness_test.dir/build.make CMakeFiles/fitness_test.dir/src/age.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/age.cpp.o
 .PHONY : src/age.cpp.o
@@ -234,6 +310,8 @@ src/age.i: src/age.cpp.i
 src/age.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_agg.dir/build.make CMakeFiles/main_agg.dir/src/age.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_age.dir/build.make CMakeFiles/main_age.dir/src/age.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_shade.dir/build.make CMakeFiles/main_shade.dir/src/age.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_vis_graph.dir/build.make CMakeFiles/main_vis_graph.dir/src/age.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/fitness_test.dir/build.make CMakeFiles/fitness_test.dir/src/age.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/age.cpp.i
 .PHONY : src/age.cpp.i
@@ -245,6 +323,8 @@ src/age.s: src/age.cpp.s
 src/age.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_agg.dir/build.make CMakeFiles/main_agg.dir/src/age.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_age.dir/build.make CMakeFiles/main_age.dir/src/age.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_shade.dir/build.make CMakeFiles/main_shade.dir/src/age.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_vis_graph.dir/build.make CMakeFiles/main_vis_graph.dir/src/age.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/fitness_test.dir/build.make CMakeFiles/fitness_test.dir/src/age.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/age.cpp.s
 .PHONY : src/age.cpp.s
@@ -256,6 +336,8 @@ src/agg.o: src/agg.cpp.o
 src/agg.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_agg.dir/build.make CMakeFiles/main_agg.dir/src/agg.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_age.dir/build.make CMakeFiles/main_age.dir/src/agg.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_shade.dir/build.make CMakeFiles/main_shade.dir/src/agg.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_vis_graph.dir/build.make CMakeFiles/main_vis_graph.dir/src/agg.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/fitness_test.dir/build.make CMakeFiles/fitness_test.dir/src/agg.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/agg.cpp.o
 .PHONY : src/agg.cpp.o
@@ -267,6 +349,8 @@ src/agg.i: src/agg.cpp.i
 src/agg.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_agg.dir/build.make CMakeFiles/main_agg.dir/src/agg.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_age.dir/build.make CMakeFiles/main_age.dir/src/agg.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_shade.dir/build.make CMakeFiles/main_shade.dir/src/agg.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_vis_graph.dir/build.make CMakeFiles/main_vis_graph.dir/src/agg.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/fitness_test.dir/build.make CMakeFiles/fitness_test.dir/src/agg.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/agg.cpp.i
 .PHONY : src/agg.cpp.i
@@ -278,6 +362,8 @@ src/agg.s: src/agg.cpp.s
 src/agg.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_agg.dir/build.make CMakeFiles/main_agg.dir/src/agg.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_age.dir/build.make CMakeFiles/main_age.dir/src/agg.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_shade.dir/build.make CMakeFiles/main_shade.dir/src/agg.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_vis_graph.dir/build.make CMakeFiles/main_vis_graph.dir/src/agg.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/fitness_test.dir/build.make CMakeFiles/fitness_test.dir/src/agg.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/agg.cpp.s
 .PHONY : src/agg.cpp.s
@@ -289,6 +375,8 @@ src/bitmap.o: src/bitmap.cpp.o
 src/bitmap.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_agg.dir/build.make CMakeFiles/main_agg.dir/src/bitmap.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_age.dir/build.make CMakeFiles/main_age.dir/src/bitmap.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_shade.dir/build.make CMakeFiles/main_shade.dir/src/bitmap.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_vis_graph.dir/build.make CMakeFiles/main_vis_graph.dir/src/bitmap.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/fitness_test.dir/build.make CMakeFiles/fitness_test.dir/src/bitmap.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/bitmap.cpp.o
 .PHONY : src/bitmap.cpp.o
@@ -300,6 +388,8 @@ src/bitmap.i: src/bitmap.cpp.i
 src/bitmap.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_agg.dir/build.make CMakeFiles/main_agg.dir/src/bitmap.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_age.dir/build.make CMakeFiles/main_age.dir/src/bitmap.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_shade.dir/build.make CMakeFiles/main_shade.dir/src/bitmap.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_vis_graph.dir/build.make CMakeFiles/main_vis_graph.dir/src/bitmap.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/fitness_test.dir/build.make CMakeFiles/fitness_test.dir/src/bitmap.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/bitmap.cpp.i
 .PHONY : src/bitmap.cpp.i
@@ -311,6 +401,8 @@ src/bitmap.s: src/bitmap.cpp.s
 src/bitmap.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_agg.dir/build.make CMakeFiles/main_agg.dir/src/bitmap.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_age.dir/build.make CMakeFiles/main_age.dir/src/bitmap.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_shade.dir/build.make CMakeFiles/main_shade.dir/src/bitmap.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_vis_graph.dir/build.make CMakeFiles/main_vis_graph.dir/src/bitmap.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/fitness_test.dir/build.make CMakeFiles/fitness_test.dir/src/bitmap.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/bitmap.cpp.s
 .PHONY : src/bitmap.cpp.s
@@ -322,6 +414,8 @@ src/chromosome.o: src/chromosome.cpp.o
 src/chromosome.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_agg.dir/build.make CMakeFiles/main_agg.dir/src/chromosome.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_age.dir/build.make CMakeFiles/main_age.dir/src/chromosome.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_shade.dir/build.make CMakeFiles/main_shade.dir/src/chromosome.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_vis_graph.dir/build.make CMakeFiles/main_vis_graph.dir/src/chromosome.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/fitness_test.dir/build.make CMakeFiles/fitness_test.dir/src/chromosome.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/chromosome.cpp.o
 .PHONY : src/chromosome.cpp.o
@@ -333,6 +427,8 @@ src/chromosome.i: src/chromosome.cpp.i
 src/chromosome.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_agg.dir/build.make CMakeFiles/main_agg.dir/src/chromosome.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_age.dir/build.make CMakeFiles/main_age.dir/src/chromosome.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_shade.dir/build.make CMakeFiles/main_shade.dir/src/chromosome.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_vis_graph.dir/build.make CMakeFiles/main_vis_graph.dir/src/chromosome.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/fitness_test.dir/build.make CMakeFiles/fitness_test.dir/src/chromosome.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/chromosome.cpp.i
 .PHONY : src/chromosome.cpp.i
@@ -344,6 +440,8 @@ src/chromosome.s: src/chromosome.cpp.s
 src/chromosome.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_agg.dir/build.make CMakeFiles/main_agg.dir/src/chromosome.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_age.dir/build.make CMakeFiles/main_age.dir/src/chromosome.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_shade.dir/build.make CMakeFiles/main_shade.dir/src/chromosome.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_vis_graph.dir/build.make CMakeFiles/main_vis_graph.dir/src/chromosome.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/fitness_test.dir/build.make CMakeFiles/fitness_test.dir/src/chromosome.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/chromosome.cpp.s
 .PHONY : src/chromosome.cpp.s
@@ -355,6 +453,8 @@ src/imageES.o: src/imageES.cpp.o
 src/imageES.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_agg.dir/build.make CMakeFiles/main_agg.dir/src/imageES.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_age.dir/build.make CMakeFiles/main_age.dir/src/imageES.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_shade.dir/build.make CMakeFiles/main_shade.dir/src/imageES.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_vis_graph.dir/build.make CMakeFiles/main_vis_graph.dir/src/imageES.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/fitness_test.dir/build.make CMakeFiles/fitness_test.dir/src/imageES.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/imageES.cpp.o
 .PHONY : src/imageES.cpp.o
@@ -366,6 +466,8 @@ src/imageES.i: src/imageES.cpp.i
 src/imageES.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_agg.dir/build.make CMakeFiles/main_agg.dir/src/imageES.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_age.dir/build.make CMakeFiles/main_age.dir/src/imageES.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_shade.dir/build.make CMakeFiles/main_shade.dir/src/imageES.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_vis_graph.dir/build.make CMakeFiles/main_vis_graph.dir/src/imageES.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/fitness_test.dir/build.make CMakeFiles/fitness_test.dir/src/imageES.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/imageES.cpp.i
 .PHONY : src/imageES.cpp.i
@@ -377,6 +479,8 @@ src/imageES.s: src/imageES.cpp.s
 src/imageES.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_agg.dir/build.make CMakeFiles/main_agg.dir/src/imageES.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_age.dir/build.make CMakeFiles/main_age.dir/src/imageES.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_shade.dir/build.make CMakeFiles/main_shade.dir/src/imageES.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_vis_graph.dir/build.make CMakeFiles/main_vis_graph.dir/src/imageES.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/fitness_test.dir/build.make CMakeFiles/fitness_test.dir/src/imageES.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/imageES.cpp.s
 .PHONY : src/imageES.cpp.s
@@ -388,6 +492,8 @@ src/main.o: src/main.cpp.o
 src/main.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_agg.dir/build.make CMakeFiles/main_agg.dir/src/main.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_age.dir/build.make CMakeFiles/main_age.dir/src/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_shade.dir/build.make CMakeFiles/main_shade.dir/src/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_vis_graph.dir/build.make CMakeFiles/main_vis_graph.dir/src/main.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/fitness_test.dir/build.make CMakeFiles/fitness_test.dir/src/main.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/main.cpp.o
 .PHONY : src/main.cpp.o
@@ -399,6 +505,8 @@ src/main.i: src/main.cpp.i
 src/main.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_agg.dir/build.make CMakeFiles/main_agg.dir/src/main.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_age.dir/build.make CMakeFiles/main_age.dir/src/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_shade.dir/build.make CMakeFiles/main_shade.dir/src/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_vis_graph.dir/build.make CMakeFiles/main_vis_graph.dir/src/main.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/fitness_test.dir/build.make CMakeFiles/fitness_test.dir/src/main.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/main.cpp.i
 .PHONY : src/main.cpp.i
@@ -410,6 +518,8 @@ src/main.s: src/main.cpp.s
 src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_agg.dir/build.make CMakeFiles/main_agg.dir/src/main.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_age.dir/build.make CMakeFiles/main_age.dir/src/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_shade.dir/build.make CMakeFiles/main_shade.dir/src/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_vis_graph.dir/build.make CMakeFiles/main_vis_graph.dir/src/main.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/fitness_test.dir/build.make CMakeFiles/fitness_test.dir/src/main.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
@@ -421,6 +531,8 @@ src/point.o: src/point.cpp.o
 src/point.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_agg.dir/build.make CMakeFiles/main_agg.dir/src/point.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_age.dir/build.make CMakeFiles/main_age.dir/src/point.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_shade.dir/build.make CMakeFiles/main_shade.dir/src/point.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_vis_graph.dir/build.make CMakeFiles/main_vis_graph.dir/src/point.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/fitness_test.dir/build.make CMakeFiles/fitness_test.dir/src/point.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/point.cpp.o
 .PHONY : src/point.cpp.o
@@ -432,6 +544,8 @@ src/point.i: src/point.cpp.i
 src/point.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_agg.dir/build.make CMakeFiles/main_agg.dir/src/point.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_age.dir/build.make CMakeFiles/main_age.dir/src/point.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_shade.dir/build.make CMakeFiles/main_shade.dir/src/point.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_vis_graph.dir/build.make CMakeFiles/main_vis_graph.dir/src/point.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/fitness_test.dir/build.make CMakeFiles/fitness_test.dir/src/point.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/point.cpp.i
 .PHONY : src/point.cpp.i
@@ -443,6 +557,8 @@ src/point.s: src/point.cpp.s
 src/point.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_agg.dir/build.make CMakeFiles/main_agg.dir/src/point.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_age.dir/build.make CMakeFiles/main_age.dir/src/point.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_shade.dir/build.make CMakeFiles/main_shade.dir/src/point.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_vis_graph.dir/build.make CMakeFiles/main_vis_graph.dir/src/point.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/fitness_test.dir/build.make CMakeFiles/fitness_test.dir/src/point.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/point.cpp.s
 .PHONY : src/point.cpp.s
@@ -454,6 +570,8 @@ src/prm_utilities.o: src/prm_utilities.cpp.o
 src/prm_utilities.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_agg.dir/build.make CMakeFiles/main_agg.dir/src/prm_utilities.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_age.dir/build.make CMakeFiles/main_age.dir/src/prm_utilities.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_shade.dir/build.make CMakeFiles/main_shade.dir/src/prm_utilities.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_vis_graph.dir/build.make CMakeFiles/main_vis_graph.dir/src/prm_utilities.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/fitness_test.dir/build.make CMakeFiles/fitness_test.dir/src/prm_utilities.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/prm_utilities.cpp.o
 .PHONY : src/prm_utilities.cpp.o
@@ -465,6 +583,8 @@ src/prm_utilities.i: src/prm_utilities.cpp.i
 src/prm_utilities.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_agg.dir/build.make CMakeFiles/main_agg.dir/src/prm_utilities.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_age.dir/build.make CMakeFiles/main_age.dir/src/prm_utilities.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_shade.dir/build.make CMakeFiles/main_shade.dir/src/prm_utilities.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_vis_graph.dir/build.make CMakeFiles/main_vis_graph.dir/src/prm_utilities.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/fitness_test.dir/build.make CMakeFiles/fitness_test.dir/src/prm_utilities.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/prm_utilities.cpp.i
 .PHONY : src/prm_utilities.cpp.i
@@ -476,9 +596,50 @@ src/prm_utilities.s: src/prm_utilities.cpp.s
 src/prm_utilities.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_agg.dir/build.make CMakeFiles/main_agg.dir/src/prm_utilities.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_age.dir/build.make CMakeFiles/main_age.dir/src/prm_utilities.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_shade.dir/build.make CMakeFiles/main_shade.dir/src/prm_utilities.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_vis_graph.dir/build.make CMakeFiles/main_vis_graph.dir/src/prm_utilities.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/fitness_test.dir/build.make CMakeFiles/fitness_test.dir/src/prm_utilities.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/prm_utilities.cpp.s
 .PHONY : src/prm_utilities.cpp.s
+
+src/shade.o: src/shade.cpp.o
+.PHONY : src/shade.o
+
+# target to build an object file
+src/shade.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_agg.dir/build.make CMakeFiles/main_agg.dir/src/shade.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_age.dir/build.make CMakeFiles/main_age.dir/src/shade.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_shade.dir/build.make CMakeFiles/main_shade.dir/src/shade.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_vis_graph.dir/build.make CMakeFiles/main_vis_graph.dir/src/shade.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fitness_test.dir/build.make CMakeFiles/fitness_test.dir/src/shade.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/shade.cpp.o
+.PHONY : src/shade.cpp.o
+
+src/shade.i: src/shade.cpp.i
+.PHONY : src/shade.i
+
+# target to preprocess a source file
+src/shade.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_agg.dir/build.make CMakeFiles/main_agg.dir/src/shade.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_age.dir/build.make CMakeFiles/main_age.dir/src/shade.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_shade.dir/build.make CMakeFiles/main_shade.dir/src/shade.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_vis_graph.dir/build.make CMakeFiles/main_vis_graph.dir/src/shade.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fitness_test.dir/build.make CMakeFiles/fitness_test.dir/src/shade.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/shade.cpp.i
+.PHONY : src/shade.cpp.i
+
+src/shade.s: src/shade.cpp.s
+.PHONY : src/shade.s
+
+# target to generate assembly for a file
+src/shade.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_agg.dir/build.make CMakeFiles/main_agg.dir/src/shade.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_age.dir/build.make CMakeFiles/main_age.dir/src/shade.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_shade.dir/build.make CMakeFiles/main_shade.dir/src/shade.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_vis_graph.dir/build.make CMakeFiles/main_vis_graph.dir/src/shade.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fitness_test.dir/build.make CMakeFiles/fitness_test.dir/src/shade.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/shade.cpp.s
+.PHONY : src/shade.cpp.s
 
 tests/fitness_test.o: tests/fitness_test.cpp.o
 .PHONY : tests/fitness_test.o
@@ -539,6 +700,8 @@ help:
 	@echo "... fitness_test"
 	@echo "... main_age"
 	@echo "... main_agg"
+	@echo "... main_shade"
+	@echo "... main_vis_graph"
 	@echo "... test"
 	@echo "... executables/main_age.o"
 	@echo "... executables/main_age.i"
@@ -546,6 +709,12 @@ help:
 	@echo "... executables/main_agg.o"
 	@echo "... executables/main_agg.i"
 	@echo "... executables/main_agg.s"
+	@echo "... executables/main_shade.o"
+	@echo "... executables/main_shade.i"
+	@echo "... executables/main_shade.s"
+	@echo "... executables/main_vis_graph.o"
+	@echo "... executables/main_vis_graph.i"
+	@echo "... executables/main_vis_graph.s"
 	@echo "... src/age.o"
 	@echo "... src/age.i"
 	@echo "... src/age.s"
@@ -570,6 +739,9 @@ help:
 	@echo "... src/prm_utilities.o"
 	@echo "... src/prm_utilities.i"
 	@echo "... src/prm_utilities.s"
+	@echo "... src/shade.o"
+	@echo "... src/shade.i"
+	@echo "... src/shade.s"
 	@echo "... tests/fitness_test.o"
 	@echo "... tests/fitness_test.i"
 	@echo "... tests/fitness_test.s"

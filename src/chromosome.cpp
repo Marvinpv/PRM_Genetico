@@ -65,6 +65,7 @@ Chromosome::Chromosome(unsigned n_points, BitMap bitmap){
     //cout << "Size points: " << points.size() << endl;
     initializeConnections(bitmap, 50);
     calculateFitness(bitmap);
+    
 }
 
 Chromosome::Chromosome(vector<Point> p, BitMap bitmap){
@@ -463,4 +464,112 @@ double Chromosome::groupArea(unsigned g){
                 + greatest_y.getDistance(lowest_x);
     
     return area;
+}
+
+bool Chromosome::operator<(const Chromosome &other){
+    return this->getFitness() < other.getFitness();
+}
+
+bool Chromosome::operator==(const Chromosome &other){
+    return this->getFitness() == other.getFitness();
+}
+
+bool Chromosome::operator>(const Chromosome &other){
+    return this->getFitness() > other.getFitness();
+}
+
+void Chromosome::visibilityGraph(BitMap bitmap, unsigned M){
+    fitness = 0;
+    guards = vector<unsigned>();
+    groups = vector<set<unsigned>>();
+    num_groups = 0;
+    fitness = 0;
+    max_group_size = 0;
+
+    for(vector<Point>::iterator it = points.begin() ; it != points.end() ; it++){
+        it->clearGroups();
+    }
+
+    connections_groups = vector<bool>(guards.size()*guards.size(),false);
+    num_groups = 0;
+    set<unsigned> connected_groups;
+
+    unsigned ntry = 0;
+    unsigned i = 0;
+    while(ntry < M){
+        unsigned x,y;
+        Point p_xy;
+        do{
+            x = Random::get<unsigned>(0,bitmap.getRows());
+            y = Random::get<unsigned>(0,bitmap.getCols());
+        }while(bitmap.getIndex(x,y) != FREE_SPACE_VAL);
+        p_xy = Point(x,y);
+
+        bool new_guard = true;
+        unsigned j=0;
+        for(vector<unsigned>::iterator it_guards = guards.begin() ; it_guards != guards.end() ; it_guards++){
+            unsigned dist;
+            if(!bitmap.checkCollision(p_xy,points[*it_guards],dist)){
+                if(new_guard){
+                    new_guard = false;
+                    p_xy.addGroup(j);
+                    p_xy.setType(TypePoint::Group);
+                }else{
+                    p_xy.addGroup(j);
+                    p_xy.setType(TypePoint::Connective); 
+                }
+                
+                
+            }
+           j++;     
+        }
+            
+        
+
+        if(new_guard){ //New guard
+            guards.push_back(i);
+            p_xy.setType(TypePoint::Group);
+            p_xy.addGroup(guards.size() - 1);
+            groups.push_back(set<unsigned>());
+            groups[groups.size() - 1].insert(i);
+            i++;
+            points.push_back(p_xy);
+            ntry = 0;
+        }else if(p_xy.getType() == TypePoint::Connective){
+            bool new_connection = false;
+            for(set<unsigned>::iterator it = p_xy.getGroups().begin() ; it != p_xy.getGroups().end() ; it++){
+                if(!connected_groups.count(*it)){
+                    new_connection = true;
+                }
+            }
+
+            if(new_connection){
+                points.push_back(p_xy);
+                i++;
+                for(set<unsigned>::iterator it = p_xy.getGroups().begin() ; it != p_xy.getGroups().end() ; it++){
+                    connected_groups.insert(*it);
+                }    
+            }
+            
+        }else{
+            ntry++;
+        }
+    }
+
+    num_groups = groups.size();
+    num_points = points.size();
+    connections = vector<bool>(num_points*num_points,false);
+
+    for(unsigned i = 0 ; i < points.size() ; i++){
+        for(unsigned j = 0 ; j < points.size() ; j++){
+            if(i != j){
+                unsigned dist;
+                bool collision = bitmap.checkCollision(points[i],points[j],dist); 
+                if(!collision){
+                    createConnection(i,j);
+                }
+            }
+        }
+        
+    }
 }

@@ -15,6 +15,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/test.dir/src/point.cpp.o.d"
   "CMakeFiles/test.dir/src/prm_utilities.cpp.o"
   "CMakeFiles/test.dir/src/prm_utilities.cpp.o.d"
+  "CMakeFiles/test.dir/src/shade.cpp.o"
+  "CMakeFiles/test.dir/src/shade.cpp.o.d"
   "CMakeFiles/test.dir/tests/test.cpp.o"
   "CMakeFiles/test.dir/tests/test.cpp.o.d"
   "test"

@@ -68,13 +68,15 @@ class Chromosome{
         Point &getPoint(unsigned i){
             if (i >= 0 && i < points.size())
                 return points[i];
+
+            return points[0];
         }
 
         unsigned getNumGroups(){
             return num_groups;
         }
 
-        double getFitness(){
+        double getFitness() const{
             return fitness;
         }
 
@@ -143,6 +145,11 @@ class Chromosome{
 
         void resetChromosome(BitMap bitmap);
 
+        bool operator<(const Chromosome &other);
+        bool operator==(const Chromosome &other);
+        bool operator>(const Chromosome &other); 
+
+        void visibilityGraph(BitMap bitmap, unsigned M);
 };
 
 #endif

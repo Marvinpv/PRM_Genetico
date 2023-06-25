@@ -12,7 +12,8 @@ AGG::AGG(BitMap bm, unsigned p_size, unsigned n_points){
     num_points = n_points;
     population = vector<Chromosome>();
     newPop = vector<Chromosome>();
-    for(unsigned i = 0 ; i < num_points ; i++){
+    population_size = p_size;
+    for(unsigned i = 0 ; i < p_size ; i++){
         Chromosome c(num_points, bitmap);
         population.push_back(c);
     }
@@ -20,7 +21,7 @@ AGG::AGG(BitMap bm, unsigned p_size, unsigned n_points){
 
 void AGG::selection(){
     newPop.clear();
-    for(unsigned i = 0 ; i < num_points ; i++){
+    for(unsigned i = 0 ; i < population_size ; i++){
         unsigned s1 = Random::get<unsigned>(0,num_points - 1);
         unsigned s2 = Random::get<unsigned>(0,num_points - 1);
         if(population[s1].getFitness() > population[s2].getFitness()){
@@ -80,13 +81,16 @@ void AGG::replacement(){
 }
 
 Chromosome AGG::optimize(){
-
+    double progress = 0.;
     while(evals < NUM_EVALS){
         selection();
         cross();
         mutation();
         replacement();
         //cout << "Evals: " << evals << endl;
+        showProgressBar(progress);
+        progress = (double)evals/(double)NUM_EVALS;
+
     }
 
     unsigned best_chrom = 0;

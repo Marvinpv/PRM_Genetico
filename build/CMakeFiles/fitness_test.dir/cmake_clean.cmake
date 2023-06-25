@@ -15,6 +15,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/fitness_test.dir/src/point.cpp.o.d"
   "CMakeFiles/fitness_test.dir/src/prm_utilities.cpp.o"
   "CMakeFiles/fitness_test.dir/src/prm_utilities.cpp.o.d"
+  "CMakeFiles/fitness_test.dir/src/shade.cpp.o"
+  "CMakeFiles/fitness_test.dir/src/shade.cpp.o.d"
   "CMakeFiles/fitness_test.dir/tests/fitness_test.cpp.o"
   "CMakeFiles/fitness_test.dir/tests/fitness_test.cpp.o.d"
   "fitness_test"

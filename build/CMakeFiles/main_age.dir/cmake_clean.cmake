@@ -17,6 +17,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/main_age.dir/src/point.cpp.o.d"
   "CMakeFiles/main_age.dir/src/prm_utilities.cpp.o"
   "CMakeFiles/main_age.dir/src/prm_utilities.cpp.o.d"
+  "CMakeFiles/main_age.dir/src/shade.cpp.o"
+  "CMakeFiles/main_age.dir/src/shade.cpp.o.d"
   "main_age"
   "main_age.pdb"
 )

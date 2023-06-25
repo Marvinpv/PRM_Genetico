@@ -34,7 +34,7 @@
             "name": "(gdb) Launch",
             "type": "cppdbg",
             "request": "launch",
-            "program": "enter program name, for example ${workspaceFolder}/a.out",
+            "program": "${workspaceFolder}/build/main_agg",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${fileDirname}",

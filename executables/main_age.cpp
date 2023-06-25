@@ -6,8 +6,19 @@
 
 using namespace std;
 
-int main(void){
-    string path = "../maps/room4_smoothed.pgm"; 
+int main(int argc, char ** argv){
+
+
+
+    if(argc != 3){
+        cout << "ERROR - Usage: ./main_agg <map_nr> <num_points>" << endl;
+        return 1;
+    }
+
+    int room_nr  = atoi(argv[1]);
+    int n_points = atoi(argv[2]);
+
+    string path = "../maps/room" + to_string(room_nr) + "_smoothed.pgm"; 
     BitMap mapa_prueba(path);
     cout<<"Rows: " << mapa_prueba.getRows() << " Cols: " <<mapa_prueba.getCols() << endl;
 
@@ -23,9 +34,9 @@ int main(void){
     //mapa_prueba.inflateObstacles(10);
     unsigned dist;
     //mapa_prueba.checkCollision(Point(100,100),Point(7,280),dist);
-    mapa_prueba.writeBitMap("../maps/room4_inflated.pgm");
+    mapa_prueba.writeBitMap("../maps/room"+ to_string(room_nr) +"_inflated.pgm");
     
-    AGE a(mapa_prueba,50,10);
+    AGE a(mapa_prueba,50,n_points);
 
     Chromosome c(a.optimize());
     cout <<"size: " <<c.getNumPoints()<<endl;
@@ -100,8 +111,10 @@ int main(void){
     }else{
         command += " " + connections;  
     }
-    
-    
+
+    command += " ../maps/room" + to_string(room_nr) + "_inflated.pgm";
+
+    command += " " + to_string(c.getFitness());
     //cout << "Comand: " << command <<endl;
 
     int ret = system(command.c_str());

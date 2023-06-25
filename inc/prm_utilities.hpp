@@ -17,4 +17,6 @@ Point rescuePoint(int x1, int x2, BitMap bitmap);
 
 void mutatePoint(Chromosome & c, BitMap bitmap);
 
+void showProgressBar(double progress);
+
 #endif

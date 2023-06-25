@@ -23,7 +23,9 @@
 						0,
 						1,
 						2,
-						3
+						3,
+						4,
+						5
 					]
 				},
 				{
@@ -65,7 +67,9 @@
 						0,
 						1,
 						2,
-						3
+						3,
+						4,
+						5
 					]
 				}
 			],
@@ -74,28 +78,42 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "fitness_test::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-fitness_test-d4c9a45c21b2e4fda1b0.json",
+					"jsonFile" : "target-fitness_test-7dfd108038e0fef9cf95.json",
 					"name" : "fitness_test",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "main_age::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-main_age-8ce68b8ec87f88875b81.json",
+					"jsonFile" : "target-main_age-fd2a4fc903fd006eba8e.json",
 					"name" : "main_age",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "main_agg::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-main_agg-3d4d3be3657744caf10a.json",
+					"jsonFile" : "target-main_agg-bdc45bedec6b27c40a66.json",
 					"name" : "main_agg",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
+					"id" : "main_shade::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-main_shade-30c3638bdff56891b878.json",
+					"name" : "main_shade",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "main_vis_graph::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-main_vis_graph-5afc42714161290da5c4.json",
+					"name" : "main_vis_graph",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
 					"id" : "test::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-test-5d3d483a47a480478d26.json",
+					"jsonFile" : "target-test-3503367ae66b07aafeb7.json",
 					"name" : "test",
 					"projectIndex" : 0
 				}
