@@ -298,20 +298,13 @@ double Chromosome::checkGraphConnectivity(){
 unsigned Chromosome::checkConnectedGroupComponentsNr(){
     vector<bool> visited(num_groups,false);
     unsigned nr = 0;
-    
-    /*cout << endl;
-    for(int i = 0 ; i < num_groups ; i++){
-        for(int j = 0 ; j < num_groups ; j++){
-            cout << checkGroupConnection(i,j) <<" ";
-        }
-        cout << endl;
-    }*/
-
 
     for(unsigned i = 0 ; i < num_groups ; i++){
         if(!visited[i]){
             nr++;
-            connectedGroupComponentsRec(i,visited);
+            connectedComponents.push_back(set<unsigned>());
+            connectedComponents[nr-1].insert(i);
+            connectedGroupComponentsRec(i,visited,nr);
         }
     }
 
@@ -320,12 +313,13 @@ unsigned Chromosome::checkConnectedGroupComponentsNr(){
 
 
 
-void Chromosome::connectedGroupComponentsRec(unsigned group,vector<bool> &visited){
+void Chromosome::connectedGroupComponentsRec(unsigned group,vector<bool> &visited, unsigned nr){
     visited[group] = true;
 
     for(unsigned i = 0 ; i < num_groups ; i++){
         if(i != group && checkGroupConnection(group,i) && !visited[i]){
-            connectedGroupComponentsRec(i,visited);
+            connectedComponents[nr - 1].insert(i);
+            connectedGroupComponentsRec(i,visited,nr);
         }
     }
 }
@@ -404,6 +398,7 @@ void Chromosome::calculateFitness(BitMap bitmap, bool debug ){
     unsigned connectedComponents = checkConnectedGroupComponentsNr();
     if(connectedComponents > 1)
         fitness/=(double)(connectedComponents);
+
 }
 
 unsigned Chromosome::groupsConnected(unsigned group){
@@ -490,7 +485,7 @@ void Chromosome::visibilityGraph(BitMap bitmap, unsigned M){
         it->clearGroups();
     }
 
-    connections_groups = vector<bool>(guards.size()*guards.size(),false);
+    
     num_groups = 0;
     set<unsigned> connected_groups;
 
@@ -548,7 +543,8 @@ void Chromosome::visibilityGraph(BitMap bitmap, unsigned M){
                 i++;
                 for(set<unsigned>::iterator it = p_xy.getGroups().begin() ; it != p_xy.getGroups().end() ; it++){
                     connected_groups.insert(*it);
-                }    
+                }
+                   
             }
             
         }else{
@@ -559,8 +555,12 @@ void Chromosome::visibilityGraph(BitMap bitmap, unsigned M){
     num_groups = groups.size();
     num_points = points.size();
     connections = vector<bool>(num_points*num_points,false);
+    connections_groups = vector<bool>(num_groups*num_groups,false);
 
     for(unsigned i = 0 ; i < points.size() ; i++){
+        if(points[i].getType() == TypePoint::Connective)
+            connectGroupsFromConnective(points[i]);
+
         for(unsigned j = 0 ; j < points.size() ; j++){
             if(i != j){
                 unsigned dist;
@@ -572,4 +572,40 @@ void Chromosome::visibilityGraph(BitMap bitmap, unsigned M){
         }
         
     }
+
+    calculateFitness(bitmap);
+}
+
+double Chromosome::calculateVisibility(BitMap bitmap){
+    double free_space = 0.;
+    unsigned connectedComps = checkConnectedGroupComponentsNr();
+    vector<double> vis_space(connectedComps,0.);
+
+    for(unsigned i = 0; i < bitmap.getRows() ; i++){
+        for(unsigned j = 0 ; j < bitmap.getCols() ; j++){
+            if(bitmap.getIndex(i,j) == FREE_SPACE_VAL){
+                Point curr(i,j);
+                
+                unsigned dist;
+                for(unsigned l = 0 ; l < connectedComponents.size() ; l++){
+                    bool visible = false;
+                    for(set<unsigned>::iterator it = connectedComponents[l].begin() ; it != connectedComponents[l].end() ; it++){
+                        for(set<unsigned>::iterator it_p = groups[*it].begin() ; it_p != groups[*it].end() ; it_p++){
+                            if(!visible and !bitmap.checkCollision(points[*it_p],curr,dist)){
+                                visible = true;
+                                vis_space[l]++;
+                            }
+                        }
+                    }
+                }
+
+                free_space++;
+            }
+            
+        }
+    }
+
+    double final_vis = *max_element(vis_space.begin(),vis_space.end());
+
+    return final_vis/free_space;
 }

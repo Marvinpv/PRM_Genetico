@@ -83,6 +83,7 @@ int main(int argc, char ** argv){
     cout << "Connected components in graph: " << c.checkConnectedGroupComponentsNr() << endl;
     c.calculateFitness(mapa_prueba, true);
     cout << "Fitness: " << c.getFitness() << endl;
+    cout << "Visibility: " << c.calculateVisibility(mapa_prueba) << endl;
 
     string command = "python3 ../src/check_groups.py "
                     + points_x

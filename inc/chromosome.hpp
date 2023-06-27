@@ -17,8 +17,9 @@ class Chromosome{
         vector<bool> connections_groups;
         double fitness;
         unsigned max_group_size;
+        vector<set<unsigned>> connectedComponents = vector<set<unsigned>>();
 
-        void connectedGroupComponentsRec(unsigned group,vector<bool> &visited);
+        void connectedGroupComponentsRec(unsigned group,vector<bool> &visited, unsigned nr);
 
     public:
         
@@ -150,6 +151,8 @@ class Chromosome{
         bool operator>(const Chromosome &other); 
 
         void visibilityGraph(BitMap bitmap, unsigned M);
+
+        double calculateVisibility(BitMap bitmap);
 };
 
 #endif

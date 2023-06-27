@@ -73,141 +73,141 @@ CMakeFiles/main_age.dir/executables/main_age.cpp.o: CMakeFiles/main_age.dir/flag
 CMakeFiles/main_age.dir/executables/main_age.cpp.o: ../executables/main_age.cpp
 CMakeFiles/main_age.dir/executables/main_age.cpp.o: CMakeFiles/main_age.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marvin/UGR/TFG/PRM_Genetico/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/main_age.dir/executables/main_age.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main_age.dir/executables/main_age.cpp.o -MF CMakeFiles/main_age.dir/executables/main_age.cpp.o.d -o CMakeFiles/main_age.dir/executables/main_age.cpp.o -c /home/marvin/UGR/TFG/PRM_Genetico/executables/main_age.cpp
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main_age.dir/executables/main_age.cpp.o -MF CMakeFiles/main_age.dir/executables/main_age.cpp.o.d -o CMakeFiles/main_age.dir/executables/main_age.cpp.o -c /home/marvin/UGR/TFG/PRM_Genetico/executables/main_age.cpp
 
 CMakeFiles/main_age.dir/executables/main_age.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main_age.dir/executables/main_age.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/marvin/UGR/TFG/PRM_Genetico/executables/main_age.cpp > CMakeFiles/main_age.dir/executables/main_age.cpp.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/marvin/UGR/TFG/PRM_Genetico/executables/main_age.cpp > CMakeFiles/main_age.dir/executables/main_age.cpp.i
 
 CMakeFiles/main_age.dir/executables/main_age.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main_age.dir/executables/main_age.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/marvin/UGR/TFG/PRM_Genetico/executables/main_age.cpp -o CMakeFiles/main_age.dir/executables/main_age.cpp.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/marvin/UGR/TFG/PRM_Genetico/executables/main_age.cpp -o CMakeFiles/main_age.dir/executables/main_age.cpp.s
 
 CMakeFiles/main_age.dir/src/age.cpp.o: CMakeFiles/main_age.dir/flags.make
 CMakeFiles/main_age.dir/src/age.cpp.o: ../src/age.cpp
 CMakeFiles/main_age.dir/src/age.cpp.o: CMakeFiles/main_age.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marvin/UGR/TFG/PRM_Genetico/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/main_age.dir/src/age.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main_age.dir/src/age.cpp.o -MF CMakeFiles/main_age.dir/src/age.cpp.o.d -o CMakeFiles/main_age.dir/src/age.cpp.o -c /home/marvin/UGR/TFG/PRM_Genetico/src/age.cpp
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main_age.dir/src/age.cpp.o -MF CMakeFiles/main_age.dir/src/age.cpp.o.d -o CMakeFiles/main_age.dir/src/age.cpp.o -c /home/marvin/UGR/TFG/PRM_Genetico/src/age.cpp
 
 CMakeFiles/main_age.dir/src/age.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main_age.dir/src/age.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/marvin/UGR/TFG/PRM_Genetico/src/age.cpp > CMakeFiles/main_age.dir/src/age.cpp.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/marvin/UGR/TFG/PRM_Genetico/src/age.cpp > CMakeFiles/main_age.dir/src/age.cpp.i
 
 CMakeFiles/main_age.dir/src/age.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main_age.dir/src/age.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/marvin/UGR/TFG/PRM_Genetico/src/age.cpp -o CMakeFiles/main_age.dir/src/age.cpp.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/marvin/UGR/TFG/PRM_Genetico/src/age.cpp -o CMakeFiles/main_age.dir/src/age.cpp.s
 
 CMakeFiles/main_age.dir/src/agg.cpp.o: CMakeFiles/main_age.dir/flags.make
 CMakeFiles/main_age.dir/src/agg.cpp.o: ../src/agg.cpp
 CMakeFiles/main_age.dir/src/agg.cpp.o: CMakeFiles/main_age.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marvin/UGR/TFG/PRM_Genetico/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/main_age.dir/src/agg.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main_age.dir/src/agg.cpp.o -MF CMakeFiles/main_age.dir/src/agg.cpp.o.d -o CMakeFiles/main_age.dir/src/agg.cpp.o -c /home/marvin/UGR/TFG/PRM_Genetico/src/agg.cpp
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main_age.dir/src/agg.cpp.o -MF CMakeFiles/main_age.dir/src/agg.cpp.o.d -o CMakeFiles/main_age.dir/src/agg.cpp.o -c /home/marvin/UGR/TFG/PRM_Genetico/src/agg.cpp
 
 CMakeFiles/main_age.dir/src/agg.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main_age.dir/src/agg.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/marvin/UGR/TFG/PRM_Genetico/src/agg.cpp > CMakeFiles/main_age.dir/src/agg.cpp.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/marvin/UGR/TFG/PRM_Genetico/src/agg.cpp > CMakeFiles/main_age.dir/src/agg.cpp.i
 
 CMakeFiles/main_age.dir/src/agg.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main_age.dir/src/agg.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/marvin/UGR/TFG/PRM_Genetico/src/agg.cpp -o CMakeFiles/main_age.dir/src/agg.cpp.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/marvin/UGR/TFG/PRM_Genetico/src/agg.cpp -o CMakeFiles/main_age.dir/src/agg.cpp.s
 
 CMakeFiles/main_age.dir/src/bitmap.cpp.o: CMakeFiles/main_age.dir/flags.make
 CMakeFiles/main_age.dir/src/bitmap.cpp.o: ../src/bitmap.cpp
 CMakeFiles/main_age.dir/src/bitmap.cpp.o: CMakeFiles/main_age.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marvin/UGR/TFG/PRM_Genetico/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/main_age.dir/src/bitmap.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main_age.dir/src/bitmap.cpp.o -MF CMakeFiles/main_age.dir/src/bitmap.cpp.o.d -o CMakeFiles/main_age.dir/src/bitmap.cpp.o -c /home/marvin/UGR/TFG/PRM_Genetico/src/bitmap.cpp
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main_age.dir/src/bitmap.cpp.o -MF CMakeFiles/main_age.dir/src/bitmap.cpp.o.d -o CMakeFiles/main_age.dir/src/bitmap.cpp.o -c /home/marvin/UGR/TFG/PRM_Genetico/src/bitmap.cpp
 
 CMakeFiles/main_age.dir/src/bitmap.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main_age.dir/src/bitmap.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/marvin/UGR/TFG/PRM_Genetico/src/bitmap.cpp > CMakeFiles/main_age.dir/src/bitmap.cpp.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/marvin/UGR/TFG/PRM_Genetico/src/bitmap.cpp > CMakeFiles/main_age.dir/src/bitmap.cpp.i
 
 CMakeFiles/main_age.dir/src/bitmap.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main_age.dir/src/bitmap.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/marvin/UGR/TFG/PRM_Genetico/src/bitmap.cpp -o CMakeFiles/main_age.dir/src/bitmap.cpp.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/marvin/UGR/TFG/PRM_Genetico/src/bitmap.cpp -o CMakeFiles/main_age.dir/src/bitmap.cpp.s
 
 CMakeFiles/main_age.dir/src/chromosome.cpp.o: CMakeFiles/main_age.dir/flags.make
 CMakeFiles/main_age.dir/src/chromosome.cpp.o: ../src/chromosome.cpp
 CMakeFiles/main_age.dir/src/chromosome.cpp.o: CMakeFiles/main_age.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marvin/UGR/TFG/PRM_Genetico/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/main_age.dir/src/chromosome.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main_age.dir/src/chromosome.cpp.o -MF CMakeFiles/main_age.dir/src/chromosome.cpp.o.d -o CMakeFiles/main_age.dir/src/chromosome.cpp.o -c /home/marvin/UGR/TFG/PRM_Genetico/src/chromosome.cpp
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main_age.dir/src/chromosome.cpp.o -MF CMakeFiles/main_age.dir/src/chromosome.cpp.o.d -o CMakeFiles/main_age.dir/src/chromosome.cpp.o -c /home/marvin/UGR/TFG/PRM_Genetico/src/chromosome.cpp
 
 CMakeFiles/main_age.dir/src/chromosome.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main_age.dir/src/chromosome.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/marvin/UGR/TFG/PRM_Genetico/src/chromosome.cpp > CMakeFiles/main_age.dir/src/chromosome.cpp.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/marvin/UGR/TFG/PRM_Genetico/src/chromosome.cpp > CMakeFiles/main_age.dir/src/chromosome.cpp.i
 
 CMakeFiles/main_age.dir/src/chromosome.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main_age.dir/src/chromosome.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/marvin/UGR/TFG/PRM_Genetico/src/chromosome.cpp -o CMakeFiles/main_age.dir/src/chromosome.cpp.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/marvin/UGR/TFG/PRM_Genetico/src/chromosome.cpp -o CMakeFiles/main_age.dir/src/chromosome.cpp.s
 
 CMakeFiles/main_age.dir/src/imageES.cpp.o: CMakeFiles/main_age.dir/flags.make
 CMakeFiles/main_age.dir/src/imageES.cpp.o: ../src/imageES.cpp
 CMakeFiles/main_age.dir/src/imageES.cpp.o: CMakeFiles/main_age.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marvin/UGR/TFG/PRM_Genetico/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/main_age.dir/src/imageES.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main_age.dir/src/imageES.cpp.o -MF CMakeFiles/main_age.dir/src/imageES.cpp.o.d -o CMakeFiles/main_age.dir/src/imageES.cpp.o -c /home/marvin/UGR/TFG/PRM_Genetico/src/imageES.cpp
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main_age.dir/src/imageES.cpp.o -MF CMakeFiles/main_age.dir/src/imageES.cpp.o.d -o CMakeFiles/main_age.dir/src/imageES.cpp.o -c /home/marvin/UGR/TFG/PRM_Genetico/src/imageES.cpp
 
 CMakeFiles/main_age.dir/src/imageES.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main_age.dir/src/imageES.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/marvin/UGR/TFG/PRM_Genetico/src/imageES.cpp > CMakeFiles/main_age.dir/src/imageES.cpp.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/marvin/UGR/TFG/PRM_Genetico/src/imageES.cpp > CMakeFiles/main_age.dir/src/imageES.cpp.i
 
 CMakeFiles/main_age.dir/src/imageES.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main_age.dir/src/imageES.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/marvin/UGR/TFG/PRM_Genetico/src/imageES.cpp -o CMakeFiles/main_age.dir/src/imageES.cpp.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/marvin/UGR/TFG/PRM_Genetico/src/imageES.cpp -o CMakeFiles/main_age.dir/src/imageES.cpp.s
 
 CMakeFiles/main_age.dir/src/main.cpp.o: CMakeFiles/main_age.dir/flags.make
 CMakeFiles/main_age.dir/src/main.cpp.o: ../src/main.cpp
 CMakeFiles/main_age.dir/src/main.cpp.o: CMakeFiles/main_age.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marvin/UGR/TFG/PRM_Genetico/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/main_age.dir/src/main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main_age.dir/src/main.cpp.o -MF CMakeFiles/main_age.dir/src/main.cpp.o.d -o CMakeFiles/main_age.dir/src/main.cpp.o -c /home/marvin/UGR/TFG/PRM_Genetico/src/main.cpp
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main_age.dir/src/main.cpp.o -MF CMakeFiles/main_age.dir/src/main.cpp.o.d -o CMakeFiles/main_age.dir/src/main.cpp.o -c /home/marvin/UGR/TFG/PRM_Genetico/src/main.cpp
 
 CMakeFiles/main_age.dir/src/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main_age.dir/src/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/marvin/UGR/TFG/PRM_Genetico/src/main.cpp > CMakeFiles/main_age.dir/src/main.cpp.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/marvin/UGR/TFG/PRM_Genetico/src/main.cpp > CMakeFiles/main_age.dir/src/main.cpp.i
 
 CMakeFiles/main_age.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main_age.dir/src/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/marvin/UGR/TFG/PRM_Genetico/src/main.cpp -o CMakeFiles/main_age.dir/src/main.cpp.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/marvin/UGR/TFG/PRM_Genetico/src/main.cpp -o CMakeFiles/main_age.dir/src/main.cpp.s
 
 CMakeFiles/main_age.dir/src/point.cpp.o: CMakeFiles/main_age.dir/flags.make
 CMakeFiles/main_age.dir/src/point.cpp.o: ../src/point.cpp
 CMakeFiles/main_age.dir/src/point.cpp.o: CMakeFiles/main_age.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marvin/UGR/TFG/PRM_Genetico/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/main_age.dir/src/point.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main_age.dir/src/point.cpp.o -MF CMakeFiles/main_age.dir/src/point.cpp.o.d -o CMakeFiles/main_age.dir/src/point.cpp.o -c /home/marvin/UGR/TFG/PRM_Genetico/src/point.cpp
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main_age.dir/src/point.cpp.o -MF CMakeFiles/main_age.dir/src/point.cpp.o.d -o CMakeFiles/main_age.dir/src/point.cpp.o -c /home/marvin/UGR/TFG/PRM_Genetico/src/point.cpp
 
 CMakeFiles/main_age.dir/src/point.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main_age.dir/src/point.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/marvin/UGR/TFG/PRM_Genetico/src/point.cpp > CMakeFiles/main_age.dir/src/point.cpp.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/marvin/UGR/TFG/PRM_Genetico/src/point.cpp > CMakeFiles/main_age.dir/src/point.cpp.i
 
 CMakeFiles/main_age.dir/src/point.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main_age.dir/src/point.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/marvin/UGR/TFG/PRM_Genetico/src/point.cpp -o CMakeFiles/main_age.dir/src/point.cpp.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/marvin/UGR/TFG/PRM_Genetico/src/point.cpp -o CMakeFiles/main_age.dir/src/point.cpp.s
 
 CMakeFiles/main_age.dir/src/prm_utilities.cpp.o: CMakeFiles/main_age.dir/flags.make
 CMakeFiles/main_age.dir/src/prm_utilities.cpp.o: ../src/prm_utilities.cpp
 CMakeFiles/main_age.dir/src/prm_utilities.cpp.o: CMakeFiles/main_age.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marvin/UGR/TFG/PRM_Genetico/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/main_age.dir/src/prm_utilities.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main_age.dir/src/prm_utilities.cpp.o -MF CMakeFiles/main_age.dir/src/prm_utilities.cpp.o.d -o CMakeFiles/main_age.dir/src/prm_utilities.cpp.o -c /home/marvin/UGR/TFG/PRM_Genetico/src/prm_utilities.cpp
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main_age.dir/src/prm_utilities.cpp.o -MF CMakeFiles/main_age.dir/src/prm_utilities.cpp.o.d -o CMakeFiles/main_age.dir/src/prm_utilities.cpp.o -c /home/marvin/UGR/TFG/PRM_Genetico/src/prm_utilities.cpp
 
 CMakeFiles/main_age.dir/src/prm_utilities.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main_age.dir/src/prm_utilities.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/marvin/UGR/TFG/PRM_Genetico/src/prm_utilities.cpp > CMakeFiles/main_age.dir/src/prm_utilities.cpp.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/marvin/UGR/TFG/PRM_Genetico/src/prm_utilities.cpp > CMakeFiles/main_age.dir/src/prm_utilities.cpp.i
 
 CMakeFiles/main_age.dir/src/prm_utilities.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main_age.dir/src/prm_utilities.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/marvin/UGR/TFG/PRM_Genetico/src/prm_utilities.cpp -o CMakeFiles/main_age.dir/src/prm_utilities.cpp.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/marvin/UGR/TFG/PRM_Genetico/src/prm_utilities.cpp -o CMakeFiles/main_age.dir/src/prm_utilities.cpp.s
 
 CMakeFiles/main_age.dir/src/shade.cpp.o: CMakeFiles/main_age.dir/flags.make
 CMakeFiles/main_age.dir/src/shade.cpp.o: ../src/shade.cpp
 CMakeFiles/main_age.dir/src/shade.cpp.o: CMakeFiles/main_age.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marvin/UGR/TFG/PRM_Genetico/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/main_age.dir/src/shade.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main_age.dir/src/shade.cpp.o -MF CMakeFiles/main_age.dir/src/shade.cpp.o.d -o CMakeFiles/main_age.dir/src/shade.cpp.o -c /home/marvin/UGR/TFG/PRM_Genetico/src/shade.cpp
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main_age.dir/src/shade.cpp.o -MF CMakeFiles/main_age.dir/src/shade.cpp.o.d -o CMakeFiles/main_age.dir/src/shade.cpp.o -c /home/marvin/UGR/TFG/PRM_Genetico/src/shade.cpp
 
 CMakeFiles/main_age.dir/src/shade.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main_age.dir/src/shade.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/marvin/UGR/TFG/PRM_Genetico/src/shade.cpp > CMakeFiles/main_age.dir/src/shade.cpp.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/marvin/UGR/TFG/PRM_Genetico/src/shade.cpp > CMakeFiles/main_age.dir/src/shade.cpp.i
 
 CMakeFiles/main_age.dir/src/shade.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main_age.dir/src/shade.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/marvin/UGR/TFG/PRM_Genetico/src/shade.cpp -o CMakeFiles/main_age.dir/src/shade.cpp.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/marvin/UGR/TFG/PRM_Genetico/src/shade.cpp -o CMakeFiles/main_age.dir/src/shade.cpp.s
 
 # Object files for target main_age
 main_age_OBJECTS = \
