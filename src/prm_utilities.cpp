@@ -28,19 +28,19 @@ void blxAlphaCross(Chromosome& father1, Chromosome& father2, double alpha, Chrom
     for(vector<Point>::iterator it = points_father1.begin() ; it != points_father1.end() ; it++){
 
         unsigned it2 = nearestPoint(*it, points_father2);
-        int x_max = max(it->getX(), points_father2[it2].getX());
-        int x_min = min(it->getX(), points_father2[it2].getX());
-        int y_max = max(it->getY(), points_father2[it2].getY());
-        int y_min = min(it->getY(), points_father2[it2].getY());
+        double x_max = max(it->getX(), points_father2[it2].getX());
+        double x_min = min(it->getX(), points_father2[it2].getX());
+        double y_max = max(it->getY(), points_father2[it2].getY());
+        double y_min = min(it->getY(), points_father2[it2].getY());
         
         points_father2.erase(points_father2.begin() + it2);
         double i_x = x_max - x_min;
         double i_y = y_max - y_min;
 
-        int x1 = Random::get<int>(x_min - i_x*alpha, x_max + i_x*alpha);
-        int x2 = Random::get<int>(x_min - i_x*alpha, x_max + i_x*alpha);
-        int y1 = Random::get<int>(y_min - i_y*alpha, y_max + i_y*alpha);
-        int y2 = Random::get<int>(y_min - i_y*alpha, y_max + i_y*alpha);
+        int x1 = (int)Random::get<double>(x_min - i_x*alpha, x_max + i_x*alpha);
+        int x2 = (int)Random::get<double>(x_min - i_x*alpha, x_max + i_x*alpha);
+        int y1 = (int)Random::get<double>(y_min - i_y*alpha, y_max + i_y*alpha);
+        int y2 = (int)Random::get<double>(y_min - i_y*alpha, y_max + i_y*alpha);
 
         Point p1 = rescuePoint(x1,y1,bitmap);
         Point p2 = rescuePoint(x2,y2,bitmap);

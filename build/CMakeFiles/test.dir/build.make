@@ -153,24 +153,10 @@ CMakeFiles/test.dir/src/imageES.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test.dir/src/imageES.cpp.s"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/marvin/UGR/TFG/PRM_Genetico/src/imageES.cpp -o CMakeFiles/test.dir/src/imageES.cpp.s
 
-CMakeFiles/test.dir/src/main.cpp.o: CMakeFiles/test.dir/flags.make
-CMakeFiles/test.dir/src/main.cpp.o: ../src/main.cpp
-CMakeFiles/test.dir/src/main.cpp.o: CMakeFiles/test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marvin/UGR/TFG/PRM_Genetico/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/test.dir/src/main.cpp.o"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.dir/src/main.cpp.o -MF CMakeFiles/test.dir/src/main.cpp.o.d -o CMakeFiles/test.dir/src/main.cpp.o -c /home/marvin/UGR/TFG/PRM_Genetico/src/main.cpp
-
-CMakeFiles/test.dir/src/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test.dir/src/main.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/marvin/UGR/TFG/PRM_Genetico/src/main.cpp > CMakeFiles/test.dir/src/main.cpp.i
-
-CMakeFiles/test.dir/src/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test.dir/src/main.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/marvin/UGR/TFG/PRM_Genetico/src/main.cpp -o CMakeFiles/test.dir/src/main.cpp.s
-
 CMakeFiles/test.dir/src/point.cpp.o: CMakeFiles/test.dir/flags.make
 CMakeFiles/test.dir/src/point.cpp.o: ../src/point.cpp
 CMakeFiles/test.dir/src/point.cpp.o: CMakeFiles/test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marvin/UGR/TFG/PRM_Genetico/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/test.dir/src/point.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marvin/UGR/TFG/PRM_Genetico/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/test.dir/src/point.cpp.o"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.dir/src/point.cpp.o -MF CMakeFiles/test.dir/src/point.cpp.o.d -o CMakeFiles/test.dir/src/point.cpp.o -c /home/marvin/UGR/TFG/PRM_Genetico/src/point.cpp
 
 CMakeFiles/test.dir/src/point.cpp.i: cmake_force
@@ -184,7 +170,7 @@ CMakeFiles/test.dir/src/point.cpp.s: cmake_force
 CMakeFiles/test.dir/src/prm_utilities.cpp.o: CMakeFiles/test.dir/flags.make
 CMakeFiles/test.dir/src/prm_utilities.cpp.o: ../src/prm_utilities.cpp
 CMakeFiles/test.dir/src/prm_utilities.cpp.o: CMakeFiles/test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marvin/UGR/TFG/PRM_Genetico/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/test.dir/src/prm_utilities.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marvin/UGR/TFG/PRM_Genetico/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/test.dir/src/prm_utilities.cpp.o"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.dir/src/prm_utilities.cpp.o -MF CMakeFiles/test.dir/src/prm_utilities.cpp.o.d -o CMakeFiles/test.dir/src/prm_utilities.cpp.o -c /home/marvin/UGR/TFG/PRM_Genetico/src/prm_utilities.cpp
 
 CMakeFiles/test.dir/src/prm_utilities.cpp.i: cmake_force
@@ -198,7 +184,7 @@ CMakeFiles/test.dir/src/prm_utilities.cpp.s: cmake_force
 CMakeFiles/test.dir/src/shade.cpp.o: CMakeFiles/test.dir/flags.make
 CMakeFiles/test.dir/src/shade.cpp.o: ../src/shade.cpp
 CMakeFiles/test.dir/src/shade.cpp.o: CMakeFiles/test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marvin/UGR/TFG/PRM_Genetico/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/test.dir/src/shade.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marvin/UGR/TFG/PRM_Genetico/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/test.dir/src/shade.cpp.o"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.dir/src/shade.cpp.o -MF CMakeFiles/test.dir/src/shade.cpp.o.d -o CMakeFiles/test.dir/src/shade.cpp.o -c /home/marvin/UGR/TFG/PRM_Genetico/src/shade.cpp
 
 CMakeFiles/test.dir/src/shade.cpp.i: cmake_force
@@ -217,7 +203,6 @@ test_OBJECTS = \
 "CMakeFiles/test.dir/src/bitmap.cpp.o" \
 "CMakeFiles/test.dir/src/chromosome.cpp.o" \
 "CMakeFiles/test.dir/src/imageES.cpp.o" \
-"CMakeFiles/test.dir/src/main.cpp.o" \
 "CMakeFiles/test.dir/src/point.cpp.o" \
 "CMakeFiles/test.dir/src/prm_utilities.cpp.o" \
 "CMakeFiles/test.dir/src/shade.cpp.o"
@@ -231,13 +216,12 @@ test: CMakeFiles/test.dir/src/agg.cpp.o
 test: CMakeFiles/test.dir/src/bitmap.cpp.o
 test: CMakeFiles/test.dir/src/chromosome.cpp.o
 test: CMakeFiles/test.dir/src/imageES.cpp.o
-test: CMakeFiles/test.dir/src/main.cpp.o
 test: CMakeFiles/test.dir/src/point.cpp.o
 test: CMakeFiles/test.dir/src/prm_utilities.cpp.o
 test: CMakeFiles/test.dir/src/shade.cpp.o
 test: CMakeFiles/test.dir/build.make
 test: CMakeFiles/test.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/marvin/UGR/TFG/PRM_Genetico/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/marvin/UGR/TFG/PRM_Genetico/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable test"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/test.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

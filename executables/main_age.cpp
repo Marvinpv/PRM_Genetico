@@ -88,12 +88,19 @@ int main(int argc, char ** argv){
     cout << "Fitness: " << c.getFitness() << endl;
     cout << "Visibility: " << c.calculateVisibility(mapa_prueba) << endl;
 
+    unsigned num_groups = c.getNumGroups();
+
+    for(unsigned i = 0 ; i < c.getNumGroups() ; i++){
+        if(groups_str[i] == "")
+            num_groups--;
+    }
+     
     string command = "python3 ../src/check_groups.py "
                     + points_x
                     + " "
                     + points_y
                     + " "
-                    + to_string(c.getNumGroups());
+                    + to_string(num_groups);
                     
     
     for(unsigned i = 0 ; i < c.getNumGroups() ; i++){

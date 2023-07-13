@@ -153,24 +153,10 @@ CMakeFiles/main_shade.dir/src/imageES.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main_shade.dir/src/imageES.cpp.s"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/marvin/UGR/TFG/PRM_Genetico/src/imageES.cpp -o CMakeFiles/main_shade.dir/src/imageES.cpp.s
 
-CMakeFiles/main_shade.dir/src/main.cpp.o: CMakeFiles/main_shade.dir/flags.make
-CMakeFiles/main_shade.dir/src/main.cpp.o: ../src/main.cpp
-CMakeFiles/main_shade.dir/src/main.cpp.o: CMakeFiles/main_shade.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marvin/UGR/TFG/PRM_Genetico/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/main_shade.dir/src/main.cpp.o"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main_shade.dir/src/main.cpp.o -MF CMakeFiles/main_shade.dir/src/main.cpp.o.d -o CMakeFiles/main_shade.dir/src/main.cpp.o -c /home/marvin/UGR/TFG/PRM_Genetico/src/main.cpp
-
-CMakeFiles/main_shade.dir/src/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main_shade.dir/src/main.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/marvin/UGR/TFG/PRM_Genetico/src/main.cpp > CMakeFiles/main_shade.dir/src/main.cpp.i
-
-CMakeFiles/main_shade.dir/src/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main_shade.dir/src/main.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/marvin/UGR/TFG/PRM_Genetico/src/main.cpp -o CMakeFiles/main_shade.dir/src/main.cpp.s
-
 CMakeFiles/main_shade.dir/src/point.cpp.o: CMakeFiles/main_shade.dir/flags.make
 CMakeFiles/main_shade.dir/src/point.cpp.o: ../src/point.cpp
 CMakeFiles/main_shade.dir/src/point.cpp.o: CMakeFiles/main_shade.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marvin/UGR/TFG/PRM_Genetico/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/main_shade.dir/src/point.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marvin/UGR/TFG/PRM_Genetico/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/main_shade.dir/src/point.cpp.o"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main_shade.dir/src/point.cpp.o -MF CMakeFiles/main_shade.dir/src/point.cpp.o.d -o CMakeFiles/main_shade.dir/src/point.cpp.o -c /home/marvin/UGR/TFG/PRM_Genetico/src/point.cpp
 
 CMakeFiles/main_shade.dir/src/point.cpp.i: cmake_force
@@ -184,7 +170,7 @@ CMakeFiles/main_shade.dir/src/point.cpp.s: cmake_force
 CMakeFiles/main_shade.dir/src/prm_utilities.cpp.o: CMakeFiles/main_shade.dir/flags.make
 CMakeFiles/main_shade.dir/src/prm_utilities.cpp.o: ../src/prm_utilities.cpp
 CMakeFiles/main_shade.dir/src/prm_utilities.cpp.o: CMakeFiles/main_shade.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marvin/UGR/TFG/PRM_Genetico/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/main_shade.dir/src/prm_utilities.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marvin/UGR/TFG/PRM_Genetico/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/main_shade.dir/src/prm_utilities.cpp.o"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main_shade.dir/src/prm_utilities.cpp.o -MF CMakeFiles/main_shade.dir/src/prm_utilities.cpp.o.d -o CMakeFiles/main_shade.dir/src/prm_utilities.cpp.o -c /home/marvin/UGR/TFG/PRM_Genetico/src/prm_utilities.cpp
 
 CMakeFiles/main_shade.dir/src/prm_utilities.cpp.i: cmake_force
@@ -198,7 +184,7 @@ CMakeFiles/main_shade.dir/src/prm_utilities.cpp.s: cmake_force
 CMakeFiles/main_shade.dir/src/shade.cpp.o: CMakeFiles/main_shade.dir/flags.make
 CMakeFiles/main_shade.dir/src/shade.cpp.o: ../src/shade.cpp
 CMakeFiles/main_shade.dir/src/shade.cpp.o: CMakeFiles/main_shade.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marvin/UGR/TFG/PRM_Genetico/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/main_shade.dir/src/shade.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marvin/UGR/TFG/PRM_Genetico/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/main_shade.dir/src/shade.cpp.o"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main_shade.dir/src/shade.cpp.o -MF CMakeFiles/main_shade.dir/src/shade.cpp.o.d -o CMakeFiles/main_shade.dir/src/shade.cpp.o -c /home/marvin/UGR/TFG/PRM_Genetico/src/shade.cpp
 
 CMakeFiles/main_shade.dir/src/shade.cpp.i: cmake_force
@@ -217,7 +203,6 @@ main_shade_OBJECTS = \
 "CMakeFiles/main_shade.dir/src/bitmap.cpp.o" \
 "CMakeFiles/main_shade.dir/src/chromosome.cpp.o" \
 "CMakeFiles/main_shade.dir/src/imageES.cpp.o" \
-"CMakeFiles/main_shade.dir/src/main.cpp.o" \
 "CMakeFiles/main_shade.dir/src/point.cpp.o" \
 "CMakeFiles/main_shade.dir/src/prm_utilities.cpp.o" \
 "CMakeFiles/main_shade.dir/src/shade.cpp.o"
@@ -231,13 +216,12 @@ main_shade: CMakeFiles/main_shade.dir/src/agg.cpp.o
 main_shade: CMakeFiles/main_shade.dir/src/bitmap.cpp.o
 main_shade: CMakeFiles/main_shade.dir/src/chromosome.cpp.o
 main_shade: CMakeFiles/main_shade.dir/src/imageES.cpp.o
-main_shade: CMakeFiles/main_shade.dir/src/main.cpp.o
 main_shade: CMakeFiles/main_shade.dir/src/point.cpp.o
 main_shade: CMakeFiles/main_shade.dir/src/prm_utilities.cpp.o
 main_shade: CMakeFiles/main_shade.dir/src/shade.cpp.o
 main_shade: CMakeFiles/main_shade.dir/build.make
 main_shade: CMakeFiles/main_shade.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/marvin/UGR/TFG/PRM_Genetico/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable main_shade"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/marvin/UGR/TFG/PRM_Genetico/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable main_shade"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/main_shade.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

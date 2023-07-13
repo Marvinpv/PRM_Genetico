@@ -22,7 +22,7 @@ enum class Alg{
 };
 
 const unsigned int NUM_ALGS = 4;
-const unsigned int NUM_EXEC = 20;
+const unsigned int NUM_EXEC = 70;
 const unsigned int POP_SIZE = 50;
 const unsigned M = 400;
 
@@ -41,7 +41,7 @@ int main(int argc, char ** argv){
                 cout << "AGG - ROOM NR " << i+1 << " - NUM POINTS " << points_for_room[i] << endl;
                 out_file += "agg_"+to_string(i+1)+"_"+to_string(points_for_room[i])+".txt";
                 f.open(out_file.c_str(),fstream::app | fstream::out);
-                //f << "Points Fitness Visibility Time"<<endl;
+                f << "Points,Fitness,Visibility,Time"<<endl;
                 for(unsigned l = 0 ; l < NUM_EXEC ; l++){
                     AGG a(mapa_prueba,POP_SIZE,points_for_room[i]);
                     auto t1 = Clock::now();
@@ -56,7 +56,7 @@ int main(int argc, char ** argv){
                 cout << "AGE - ROOM NR " << i+1 << " - NUM POINTS " << points_for_room[i] << endl;
                 out_file += "age_"+to_string(i+1)+"_"+to_string(points_for_room[i])+".txt";
                 f.open(out_file.c_str(),fstream::app | fstream::out);
-                //f << "Points Fitness Visibility Time"<<endl;
+                f << "Points,Fitness,Visibility,Time"<<endl;
                 for(unsigned l = 0 ; l < NUM_EXEC ; l++){
                     AGE a(mapa_prueba,POP_SIZE,points_for_room[i]);
                     auto t1 = Clock::now();
@@ -72,7 +72,7 @@ int main(int argc, char ** argv){
                 cout << "SHADE - ROOM NR " << i+1 << " - NUM POINTS " << points_for_room[i] << endl;
                 out_file += "shade_"+to_string(i+1)+"_"+to_string(points_for_room[i])+".txt";
                 f.open(out_file.c_str(),fstream::app | fstream::out);
-                //f << "Points Fitness Visibility Time"<<endl;
+                f << "Points,Fitness,Visibility,Time"<<endl;
                 for(unsigned l = 0 ; l < NUM_EXEC ; l++){
                     SHADE a(POP_SIZE,points_for_room[i], mapa_prueba);
                     auto t1 = Clock::now();
@@ -86,7 +86,7 @@ int main(int argc, char ** argv){
                 cout << "VISIBILITY GRAPH - ROOM NR " << i+1 << " - M " << M << endl;
                 out_file += "vis_"+to_string(i+1)+"_"+to_string(points_for_room[i])+".txt";
                 f.open(out_file.c_str(),fstream::app | fstream::out);
-                //f << "Points Fitness Visibility Time"<<endl;
+                f << "Points,Fitness,Visibility,Time"<<endl;
                 for(unsigned l = 0 ; l < NUM_EXEC ; l++){
                     Chromosome c;
                     auto t1 = Clock::now();

@@ -26,7 +26,7 @@ class BitMap{
 
         void writeBitMap(string path);
 
-        void smoothBitMap();
+        //void smoothBitMap();
 
         void inflateObstacles(unsigned radius);
 

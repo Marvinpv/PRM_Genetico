@@ -14,7 +14,6 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/marvin/UGR/TFG/PRM_Genetico/src/bitmap.cpp" "CMakeFiles/main_age.dir/src/bitmap.cpp.o" "gcc" "CMakeFiles/main_age.dir/src/bitmap.cpp.o.d"
   "/home/marvin/UGR/TFG/PRM_Genetico/src/chromosome.cpp" "CMakeFiles/main_age.dir/src/chromosome.cpp.o" "gcc" "CMakeFiles/main_age.dir/src/chromosome.cpp.o.d"
   "/home/marvin/UGR/TFG/PRM_Genetico/src/imageES.cpp" "CMakeFiles/main_age.dir/src/imageES.cpp.o" "gcc" "CMakeFiles/main_age.dir/src/imageES.cpp.o.d"
-  "/home/marvin/UGR/TFG/PRM_Genetico/src/main.cpp" "CMakeFiles/main_age.dir/src/main.cpp.o" "gcc" "CMakeFiles/main_age.dir/src/main.cpp.o.d"
   "/home/marvin/UGR/TFG/PRM_Genetico/src/point.cpp" "CMakeFiles/main_age.dir/src/point.cpp.o" "gcc" "CMakeFiles/main_age.dir/src/point.cpp.o.d"
   "/home/marvin/UGR/TFG/PRM_Genetico/src/prm_utilities.cpp" "CMakeFiles/main_age.dir/src/prm_utilities.cpp.o" "gcc" "CMakeFiles/main_age.dir/src/prm_utilities.cpp.o.d"
   "/home/marvin/UGR/TFG/PRM_Genetico/src/shade.cpp" "CMakeFiles/main_age.dir/src/shade.cpp.o" "gcc" "CMakeFiles/main_age.dir/src/shade.cpp.o.d"

@@ -17,6 +17,7 @@ class SHADE{
         vector<double> Sf;
         vector<double> Scr;
         vector<double> delta_fk;
+        double sum_delta;
         unsigned pop_size;
         unsigned num_points;
         BitMap bitmap;
@@ -29,6 +30,8 @@ class SHADE{
         vector<unsigned> createTrials();
 
         Chromosome currentToPBestTrial(double p, unsigned i, double f);
+
+        Chromosome getPBest(double p);
 
         bool replaceWithTrials(vector<unsigned> r);
 

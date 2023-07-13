@@ -31,11 +31,6 @@
 },
 {
   "directory": "/home/marvin/UGR/TFG/PRM_Genetico/build",
-  "command": "/usr/bin/g++ -D_DISABLE_EXTENDED_ALIGNED_STORAGE -I/home/marvin/UGR/TFG/PRM_Genetico/inc  -O2 -g -std=gnu++14 -o CMakeFiles/main_agg.dir/src/main.cpp.o -c /home/marvin/UGR/TFG/PRM_Genetico/src/main.cpp",
-  "file": "/home/marvin/UGR/TFG/PRM_Genetico/src/main.cpp"
-},
-{
-  "directory": "/home/marvin/UGR/TFG/PRM_Genetico/build",
   "command": "/usr/bin/g++ -D_DISABLE_EXTENDED_ALIGNED_STORAGE -I/home/marvin/UGR/TFG/PRM_Genetico/inc  -O2 -g -std=gnu++14 -o CMakeFiles/main_agg.dir/src/point.cpp.o -c /home/marvin/UGR/TFG/PRM_Genetico/src/point.cpp",
   "file": "/home/marvin/UGR/TFG/PRM_Genetico/src/point.cpp"
 },
@@ -78,11 +73,6 @@
   "directory": "/home/marvin/UGR/TFG/PRM_Genetico/build",
   "command": "/usr/bin/g++ -D_DISABLE_EXTENDED_ALIGNED_STORAGE -I/home/marvin/UGR/TFG/PRM_Genetico/inc  -O2 -g -std=gnu++14 -o CMakeFiles/main_age.dir/src/imageES.cpp.o -c /home/marvin/UGR/TFG/PRM_Genetico/src/imageES.cpp",
   "file": "/home/marvin/UGR/TFG/PRM_Genetico/src/imageES.cpp"
-},
-{
-  "directory": "/home/marvin/UGR/TFG/PRM_Genetico/build",
-  "command": "/usr/bin/g++ -D_DISABLE_EXTENDED_ALIGNED_STORAGE -I/home/marvin/UGR/TFG/PRM_Genetico/inc  -O2 -g -std=gnu++14 -o CMakeFiles/main_age.dir/src/main.cpp.o -c /home/marvin/UGR/TFG/PRM_Genetico/src/main.cpp",
-  "file": "/home/marvin/UGR/TFG/PRM_Genetico/src/main.cpp"
 },
 {
   "directory": "/home/marvin/UGR/TFG/PRM_Genetico/build",
@@ -131,11 +121,6 @@
 },
 {
   "directory": "/home/marvin/UGR/TFG/PRM_Genetico/build",
-  "command": "/usr/bin/g++ -D_DISABLE_EXTENDED_ALIGNED_STORAGE -I/home/marvin/UGR/TFG/PRM_Genetico/inc  -O2 -g -std=gnu++14 -o CMakeFiles/main_shade.dir/src/main.cpp.o -c /home/marvin/UGR/TFG/PRM_Genetico/src/main.cpp",
-  "file": "/home/marvin/UGR/TFG/PRM_Genetico/src/main.cpp"
-},
-{
-  "directory": "/home/marvin/UGR/TFG/PRM_Genetico/build",
   "command": "/usr/bin/g++ -D_DISABLE_EXTENDED_ALIGNED_STORAGE -I/home/marvin/UGR/TFG/PRM_Genetico/inc  -O2 -g -std=gnu++14 -o CMakeFiles/main_shade.dir/src/point.cpp.o -c /home/marvin/UGR/TFG/PRM_Genetico/src/point.cpp",
   "file": "/home/marvin/UGR/TFG/PRM_Genetico/src/point.cpp"
 },
@@ -178,11 +163,6 @@
   "directory": "/home/marvin/UGR/TFG/PRM_Genetico/build",
   "command": "/usr/bin/g++ -D_DISABLE_EXTENDED_ALIGNED_STORAGE -I/home/marvin/UGR/TFG/PRM_Genetico/inc  -O2 -g -std=gnu++14 -o CMakeFiles/main_vis_graph.dir/src/imageES.cpp.o -c /home/marvin/UGR/TFG/PRM_Genetico/src/imageES.cpp",
   "file": "/home/marvin/UGR/TFG/PRM_Genetico/src/imageES.cpp"
-},
-{
-  "directory": "/home/marvin/UGR/TFG/PRM_Genetico/build",
-  "command": "/usr/bin/g++ -D_DISABLE_EXTENDED_ALIGNED_STORAGE -I/home/marvin/UGR/TFG/PRM_Genetico/inc  -O2 -g -std=gnu++14 -o CMakeFiles/main_vis_graph.dir/src/main.cpp.o -c /home/marvin/UGR/TFG/PRM_Genetico/src/main.cpp",
-  "file": "/home/marvin/UGR/TFG/PRM_Genetico/src/main.cpp"
 },
 {
   "directory": "/home/marvin/UGR/TFG/PRM_Genetico/build",
@@ -231,11 +211,6 @@
 },
 {
   "directory": "/home/marvin/UGR/TFG/PRM_Genetico/build",
-  "command": "/usr/bin/g++ -D_DISABLE_EXTENDED_ALIGNED_STORAGE -I/home/marvin/UGR/TFG/PRM_Genetico/inc  -O2 -g -std=gnu++14 -o CMakeFiles/main.dir/src/main.cpp.o -c /home/marvin/UGR/TFG/PRM_Genetico/src/main.cpp",
-  "file": "/home/marvin/UGR/TFG/PRM_Genetico/src/main.cpp"
-},
-{
-  "directory": "/home/marvin/UGR/TFG/PRM_Genetico/build",
   "command": "/usr/bin/g++ -D_DISABLE_EXTENDED_ALIGNED_STORAGE -I/home/marvin/UGR/TFG/PRM_Genetico/inc  -O2 -g -std=gnu++14 -o CMakeFiles/main.dir/src/point.cpp.o -c /home/marvin/UGR/TFG/PRM_Genetico/src/point.cpp",
   "file": "/home/marvin/UGR/TFG/PRM_Genetico/src/point.cpp"
 },
@@ -281,11 +256,6 @@
 },
 {
   "directory": "/home/marvin/UGR/TFG/PRM_Genetico/build",
-  "command": "/usr/bin/g++ -D_DISABLE_EXTENDED_ALIGNED_STORAGE -I/home/marvin/UGR/TFG/PRM_Genetico/inc  -O2 -g -std=gnu++14 -o CMakeFiles/fitness_test.dir/src/main.cpp.o -c /home/marvin/UGR/TFG/PRM_Genetico/src/main.cpp",
-  "file": "/home/marvin/UGR/TFG/PRM_Genetico/src/main.cpp"
-},
-{
-  "directory": "/home/marvin/UGR/TFG/PRM_Genetico/build",
   "command": "/usr/bin/g++ -D_DISABLE_EXTENDED_ALIGNED_STORAGE -I/home/marvin/UGR/TFG/PRM_Genetico/inc  -O2 -g -std=gnu++14 -o CMakeFiles/fitness_test.dir/src/point.cpp.o -c /home/marvin/UGR/TFG/PRM_Genetico/src/point.cpp",
   "file": "/home/marvin/UGR/TFG/PRM_Genetico/src/point.cpp"
 },
@@ -328,11 +298,6 @@
   "directory": "/home/marvin/UGR/TFG/PRM_Genetico/build",
   "command": "/usr/bin/g++ -D_DISABLE_EXTENDED_ALIGNED_STORAGE -I/home/marvin/UGR/TFG/PRM_Genetico/inc  -O2 -g -std=gnu++14 -o CMakeFiles/test.dir/src/imageES.cpp.o -c /home/marvin/UGR/TFG/PRM_Genetico/src/imageES.cpp",
   "file": "/home/marvin/UGR/TFG/PRM_Genetico/src/imageES.cpp"
-},
-{
-  "directory": "/home/marvin/UGR/TFG/PRM_Genetico/build",
-  "command": "/usr/bin/g++ -D_DISABLE_EXTENDED_ALIGNED_STORAGE -I/home/marvin/UGR/TFG/PRM_Genetico/inc  -O2 -g -std=gnu++14 -o CMakeFiles/test.dir/src/main.cpp.o -c /home/marvin/UGR/TFG/PRM_Genetico/src/main.cpp",
-  "file": "/home/marvin/UGR/TFG/PRM_Genetico/src/main.cpp"
 },
 {
   "directory": "/home/marvin/UGR/TFG/PRM_Genetico/build",

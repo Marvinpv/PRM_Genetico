@@ -491,6 +491,7 @@ void Chromosome::visibilityGraph(BitMap bitmap, unsigned M){
 
     unsigned ntry = 0;
     unsigned i = 0;
+    unsigned points_generated = 0;
     while(ntry < M){
         unsigned x,y;
         Point p_xy;
@@ -499,7 +500,7 @@ void Chromosome::visibilityGraph(BitMap bitmap, unsigned M){
             y = Random::get<unsigned>(0,bitmap.getCols());
         }while(bitmap.getIndex(x,y) != FREE_SPACE_VAL);
         p_xy = Point(x,y);
-
+        points_generated++;
         bool new_guard = true;
         unsigned j=0;
         for(vector<unsigned>::iterator it_guards = guards.begin() ; it_guards != guards.end() ; it_guards++){
@@ -574,6 +575,7 @@ void Chromosome::visibilityGraph(BitMap bitmap, unsigned M){
     }
 
     calculateFitness(bitmap);
+    cout << "Generated points: " << points_generated << endl;
 }
 
 double Chromosome::calculateVisibility(BitMap bitmap){

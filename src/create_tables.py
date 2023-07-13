@@ -86,8 +86,8 @@ def crear_tablas_html(path_salida,path_entrada,num_rooms):
             </table></p>
             """
 
-
-        plt.boxplot(visibility_values.T)
+        green_diamond = dict(markerfacecolor='b', marker='h')
+        plt.boxplot(visibility_values.T,flierprops=green_diamond)
         plt.title('Room nr ' + str(room + 1))
         plt.xticks(range(1,len(names)+1),names)
         

@@ -11,8 +11,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/main_vis_graph.dir/src/chromosome.cpp.o.d"
   "CMakeFiles/main_vis_graph.dir/src/imageES.cpp.o"
   "CMakeFiles/main_vis_graph.dir/src/imageES.cpp.o.d"
-  "CMakeFiles/main_vis_graph.dir/src/main.cpp.o"
-  "CMakeFiles/main_vis_graph.dir/src/main.cpp.o.d"
   "CMakeFiles/main_vis_graph.dir/src/point.cpp.o"
   "CMakeFiles/main_vis_graph.dir/src/point.cpp.o.d"
   "CMakeFiles/main_vis_graph.dir/src/prm_utilities.cpp.o"

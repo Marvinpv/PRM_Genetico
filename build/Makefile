@@ -537,48 +537,6 @@ src/imageES.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/imageES.cpp.s
 .PHONY : src/imageES.cpp.s
 
-src/main.o: src/main.cpp.o
-.PHONY : src/main.o
-
-# target to build an object file
-src/main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_agg.dir/build.make CMakeFiles/main_agg.dir/src/main.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_age.dir/build.make CMakeFiles/main_age.dir/src/main.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_shade.dir/build.make CMakeFiles/main_shade.dir/src/main.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_vis_graph.dir/build.make CMakeFiles/main_vis_graph.dir/src/main.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/main.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/fitness_test.dir/build.make CMakeFiles/fitness_test.dir/src/main.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/main.cpp.o
-.PHONY : src/main.cpp.o
-
-src/main.i: src/main.cpp.i
-.PHONY : src/main.i
-
-# target to preprocess a source file
-src/main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_agg.dir/build.make CMakeFiles/main_agg.dir/src/main.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_age.dir/build.make CMakeFiles/main_age.dir/src/main.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_shade.dir/build.make CMakeFiles/main_shade.dir/src/main.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_vis_graph.dir/build.make CMakeFiles/main_vis_graph.dir/src/main.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/main.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/fitness_test.dir/build.make CMakeFiles/fitness_test.dir/src/main.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/main.cpp.i
-.PHONY : src/main.cpp.i
-
-src/main.s: src/main.cpp.s
-.PHONY : src/main.s
-
-# target to generate assembly for a file
-src/main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_agg.dir/build.make CMakeFiles/main_agg.dir/src/main.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_age.dir/build.make CMakeFiles/main_age.dir/src/main.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_shade.dir/build.make CMakeFiles/main_shade.dir/src/main.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_vis_graph.dir/build.make CMakeFiles/main_vis_graph.dir/src/main.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/main.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/fitness_test.dir/build.make CMakeFiles/fitness_test.dir/src/main.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/main.cpp.s
-.PHONY : src/main.cpp.s
-
 src/point.o: src/point.cpp.o
 .PHONY : src/point.o
 
@@ -798,9 +756,6 @@ help:
 	@echo "... src/imageES.o"
 	@echo "... src/imageES.i"
 	@echo "... src/imageES.s"
-	@echo "... src/main.o"
-	@echo "... src/main.i"
-	@echo "... src/main.s"
 	@echo "... src/point.o"
 	@echo "... src/point.i"
 	@echo "... src/point.s"

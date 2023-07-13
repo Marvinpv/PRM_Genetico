@@ -28,19 +28,39 @@ SHADE::SHADE(unsigned p_size,unsigned n_points, BitMap bm){
     Sf = vector<double>();
     Scr = vector<double>();
     delta_fk = vector<double>();
+    sum_delta = 0.;
+
 
 }
 
+Chromosome SHADE::getPBest(double p){
+    unsigned iters = Random::get<unsigned>(0,(unsigned)(p*(double)pop_size));
+    set<unsigned> visited = set<unsigned>();
+    double bestFitness = 0.0;
+    int bestChrom = -1;
+    for(unsigned i = 0 ; i < iters+1 ; i++){
+        bestFitness = 0.0;
+        bestChrom = -1;
+        for(unsigned j = 0 ; j < pop_size ; j++){
+            if(population[j].getFitness() > bestFitness && !visited.count(j)){
+                bestFitness = population[j].getFitness();
+                bestChrom = j;
+            }
+        }
+    }
+
+    return Chromosome(population[bestChrom]);
+}
 
 Chromosome SHADE::currentToPBestTrial(double p, unsigned a, double f){
 
     //We generate the necessary chromosomes for the new v_i
-    vector<Chromosome> sortedCopy(population);
-    sort(sortedCopy.begin(),sortedCopy.end());
+    //vector<Chromosome> sortedCopy(population);
+    //sort(sortedCopy.begin(),sortedCopy.end());
     
 
-    unsigned p_best = Random::get<unsigned>(0,(unsigned)(p*pop_size));
-    Chromosome x_pbest(sortedCopy[p_best]);
+    //unsigned p_best = Random::get<unsigned>(0,(unsigned)(p*pop_size));
+    Chromosome x_pbest(getPBest(p));
     
     unsigned r1 = Random::get<unsigned>(0,pop_size - 1);
     Chromosome x_r1(population[r1]);
@@ -52,7 +72,7 @@ Chromosome SHADE::currentToPBestTrial(double p, unsigned a, double f){
         x_r2 = Chromosome(population[r2]);
     }
 
-    //cout << "Hola" << endl;
+    //cout << "Archive size: " << archive.size() << endl;
     Chromosome x_a(population[a]);
 
     vector<Point> ret;
@@ -60,14 +80,14 @@ Chromosome SHADE::currentToPBestTrial(double p, unsigned a, double f){
     for(unsigned i = 0 ; i < num_points ; i++){
         Point comp1(x_a.getPoint(i));
 
-        int x_comp2 = (int)(f*((double)x_pbest.getPoint(i).getX() - (double)x_a.getPoint(i).getX()));
-        int y_comp2 = (int)(f*((double)x_pbest.getPoint(i).getY() - (double)x_a.getPoint(i).getY())); 
+        double x_comp2 = (f*((double)x_pbest.getPoint(i).getX() - (double)x_a.getPoint(i).getX()));
+        double y_comp2 = (f*((double)x_pbest.getPoint(i).getY() - (double)x_a.getPoint(i).getY())); 
 
-        int x_comp3 = (int)(f*((double)x_r1.getPoint(i).getX() - (double)x_r2.getPoint(i).getX()));
-        int y_comp3 = (int)(f*((double)x_r1.getPoint(i).getY() - (double)x_r2.getPoint(i).getY())); 
+        double x_comp3 = (f*((double)x_r1.getPoint(i).getX() - (double)x_r2.getPoint(i).getX()));
+        double y_comp3 = (f*((double)x_r1.getPoint(i).getY() - (double)x_r2.getPoint(i).getY())); 
         
-        int x_final_point = (int)((int)comp1.getX() + x_comp2 + x_comp3);
-        int y_final_point = (int)((int)comp1.getY() + y_comp2 + y_comp3);
+        int x_final_point = (int)((double)comp1.getX() + x_comp2 + x_comp3);
+        int y_final_point = (int)((double)comp1.getY() + y_comp2 + y_comp3);
         
 
         if(x_final_point > bitmap.getRows() ){
@@ -138,6 +158,9 @@ bool SHADE::replaceWithTrials(vector<unsigned> r){
             Scr.push_back(H_Mcr[r[i]]);
             Sf.push_back(H_Mf[r[i]]);
             delta_fk.push_back(trials[i].getFitness() - population[i].getFitness());
+            sum_delta += delta_fk[delta_fk.size() - 1];
+            
+            //cout << "Size Scr: " << Scr.size() << endl; 
 
             population[i] = Chromosome(trials[i]);
         }
@@ -147,11 +170,6 @@ bool SHADE::replaceWithTrials(vector<unsigned> r){
 }
 
 double SHADE::wk(unsigned k){
-    double sum_delta=0;
-    for(unsigned i = 0 ; i < Scr.size() ; i++){
-        sum_delta += delta_fk[i];
-    }
-
     return delta_fk[k]/sum_delta;
 }
 

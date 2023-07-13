@@ -39,7 +39,7 @@ int main(int argc, char ** argv){
     cout <<"size: " <<c.getNumPoints()<<endl;
     string points_x = "";
     string points_y = "";
-    
+    string points_x_inverted = "";
     
     vector<string> groups_str(c.getNumGroups(),"");
     string connective_group = "";
@@ -50,6 +50,7 @@ int main(int argc, char ** argv){
             if(i == 0){
                 points_x += to_string(c.getPoint(j).getX()) + ",";
                 points_y += to_string(c.getPoint(j).getY()) + ",";
+                points_x_inverted += to_string(mapa_prueba.getRows() - c.getPoint(j).getX()) + ",";
                 if(c.getPoint(j).getType() == TypePoint::Connective)
                     connective_group += to_string(j) + ",";
             }
@@ -78,19 +79,27 @@ int main(int argc, char ** argv){
 
 
     cout << "Points x: " << points_x << endl;
+    cout << "Points x inverted:" << points_x_inverted << endl;
     cout << "Points y: " << points_y << endl;
-    //cout << "Connections: " << connections << endl;
+    cout << "Connections: " << connections << endl;
     cout << "Connected components in graph: " << c.checkConnectedGroupComponentsNr() << endl;
     c.calculateFitness(mapa_prueba, true);
     cout << "Fitness: " << c.getFitness() << endl;
     cout << "Visibility: " << c.calculateVisibility(mapa_prueba) << endl;
+
+    unsigned num_groups = c.getNumGroups();
+
+    for(unsigned i = 0 ; i < c.getNumGroups() ; i++){
+        if(groups_str[i] == "")
+            num_groups--;
+    }
 
     string command = "python3 ../src/check_groups.py "
                     + points_x
                     + " "
                     + points_y
                     + " "
-                    + to_string(c.getNumGroups());
+                    + to_string(num_groups);
                     
     
     for(unsigned i = 0 ; i < c.getNumGroups() ; i++){

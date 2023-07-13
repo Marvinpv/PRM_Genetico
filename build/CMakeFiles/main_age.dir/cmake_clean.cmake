@@ -11,8 +11,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/main_age.dir/src/chromosome.cpp.o.d"
   "CMakeFiles/main_age.dir/src/imageES.cpp.o"
   "CMakeFiles/main_age.dir/src/imageES.cpp.o.d"
-  "CMakeFiles/main_age.dir/src/main.cpp.o"
-  "CMakeFiles/main_age.dir/src/main.cpp.o.d"
   "CMakeFiles/main_age.dir/src/point.cpp.o"
   "CMakeFiles/main_age.dir/src/point.cpp.o.d"
   "CMakeFiles/main_age.dir/src/prm_utilities.cpp.o"

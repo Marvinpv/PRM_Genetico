@@ -9,8 +9,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/fitness_test.dir/src/chromosome.cpp.o.d"
   "CMakeFiles/fitness_test.dir/src/imageES.cpp.o"
   "CMakeFiles/fitness_test.dir/src/imageES.cpp.o.d"
-  "CMakeFiles/fitness_test.dir/src/main.cpp.o"
-  "CMakeFiles/fitness_test.dir/src/main.cpp.o.d"
   "CMakeFiles/fitness_test.dir/src/point.cpp.o"
   "CMakeFiles/fitness_test.dir/src/point.cpp.o.d"
   "CMakeFiles/fitness_test.dir/src/prm_utilities.cpp.o"
